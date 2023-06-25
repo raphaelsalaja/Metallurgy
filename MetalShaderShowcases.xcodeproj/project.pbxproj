@@ -27,6 +27,9 @@
 		F29FE6522A45B1B700EAAC87 /* Vignette.metal in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6512A45B1B700EAAC87 /* Vignette.metal */; };
 		F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6532A45B78F00EAAC87 /* Shader.swift */; };
 		F2B997622A46689100F872D3 /* MovingNumbersView in Frameworks */ = {isa = PBXBuildFile; productRef = F2B997612A46689100F872D3 /* MovingNumbersView */; };
+		F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */; };
+		F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */; };
+		F2B997682A47B64200F872D3 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997672A47B64200F872D3 /* Parameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		F29FE64F2A45942F00EAAC87 /* Sepia.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sepia.metal; sourceTree = "<group>"; };
 		F29FE6512A45B1B700EAAC87 /* Vignette.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vignette.metal; sourceTree = "<group>"; };
 		F29FE6532A45B78F00EAAC87 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
+		F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChromaticAbberation.metal; sourceTree = "<group>"; };
+		F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticAbberation.swift; sourceTree = "<group>"; };
+		F2B997672A47B64200F872D3 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		F2BCB1102A4258A10010EBF7 /* Sepia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepia.swift; sourceTree = "<group>"; };
 		F2BCB11D2A4300270010EBF7 /* SimpleWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWave.swift; sourceTree = "<group>"; };
 		F2BCB11F2A43002F0010EBF7 /* ComplexWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWave.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
+				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
 				F21878782A41DC5300640BAA /* Vignette.swift */,
 				F218787A2A41DC7300640BAA /* Waves.swift */,
 				F218787C2A41DC8300640BAA /* Pixellate.swift */,
@@ -134,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */,
+				F2B997672A47B64200F872D3 /* Parameters.swift */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 				516BF6E62A3A605700C821DF /* Shaders.metal */,
 				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
 				F29FE6512A45B1B700EAAC87 /* Vignette.metal */,
+				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -257,10 +266,13 @@
 				F299177A2A4308B0005DBC70 /* Noise.swift in Sources */,
 				F299177B2A4308B0005DBC70 /* Emboss.swift in Sources */,
 				F299177C2A4308B0005DBC70 /* Checkerboard.swift in Sources */,
+				F2B997682A47B64200F872D3 /* Parameters.swift in Sources */,
 				F299177E2A4308B0005DBC70 /* Waves.swift in Sources */,
 				F29FE6522A45B1B700EAAC87 /* Vignette.metal in Sources */,
 				F29FE6482A448BBF00EAAC87 /* ShaderNavigationLink.swift in Sources */,
 				F299177F2A4308B0005DBC70 /* Pixellate.swift in Sources */,
+				F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */,
+				F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */,
 				F29917802A4308B0005DBC70 /* Grayscale.swift in Sources */,
 				F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */,
 				F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */,

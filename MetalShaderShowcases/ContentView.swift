@@ -3,26 +3,25 @@ import Observation
 import SwiftUI
 
 func LibraryView() -> some View {
-    let shaders = ShaderShowcases().shaders
-    let categories = ShaderShowcases().categories
+    @State var shaders = ShaderShowcases().shaders
+    @State var categories = ShaderShowcases().categories
+
+    func dummyAction() {}
 
     return NavigationView {
         List {
-            ForEach(shaders) { shader in
-                NavigationLink(destination: shader.showcase) {
-                    Text(shader.name)
-                }
-            }
-        }.toolbar {
-            ToolbarItem(placement: .principal) {
-                Picker("Categories", selection: .constant(0)) {
-                    ForEach(categories, id: \.self) { category in
-                        Text(category)
+            Section {
+                ForEach(shaders) { shader in
+                    NavigationLink(destination: shader.showcase) {
+                        Text(shader.name)
                     }
                 }
-                .pickerStyle(.segmented)
             }
+            ControlGroup {}
         }
+        .navigationTitle("Library")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationSplitViewStyle(.balanced)
     }
 }
 

@@ -32,14 +32,21 @@ final class ShaderShowcases {
             name: "Sepia",
             description: "Sepia makes photos appear hazy, warm, and a bit sentimental. Inverting it makes the photo appear cooler.",
             author: "Raphael S",
-            category: "color",
+            category: "Color",
             showcase: AnyView(Sepia())
+        ),
+        MetalShader(
+            name: "Chromatic Abberation",
+            description: "Chromatic Abberation is a distortion effect that makes the image appear as if it was viewed through a prism.",
+            author: "Raphael S",
+            category: "Color",
+            showcase: AnyView(ChromaticAbberation())
         ),
     ]
 
     var categories: [String] = [
-        "color",
-        "layer",
-        "distortion",
+        "Color",
+        "Layer",
+        "Distortion",
     ]
 }
