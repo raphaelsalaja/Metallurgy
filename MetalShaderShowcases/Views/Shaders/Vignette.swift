@@ -8,19 +8,54 @@
 import SwiftUI
 
 struct Vignette: View {
-    @State var strength: Float = 0
+    @State var intensity: Float = 0
+    @State var distance: Float = 0
 
     var body: some View {
         List {
-            ShowcaseImage()
-                .layerEffect(ShaderLibrary.vignette(.float(strength)), maxSampleOffset: .zero)
-                .animation(.linear(duration: 1), value: strength)
+            Section {
+                HStack {
+                    Text("Vignette")
+                        .fontWeight(.medium)
 
-            Section("Strength") {
-                Stepper(value: $strength.animation(.linear(duration: 1)), in: -10 ... 10) {
-                    Text("\(strength, format: .number)").animation(nil, value: strength)
+                    Spacer()
+
+                    HStack {
+                        HStack {
+                            Text("Color").font(Font.caption.bold())
+                        }
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color.blue.tertiary)
+                    .cornerRadius(20)
                 }
+                .listRowSeparator(.hidden)
+
+                ShowcaseImage()
+                    .layerEffect(
+                        ShaderLibrary.vignette(
+                            .float(intensity),
+                            .float(distance)
+                        ),
+                        maxSampleOffset: .zero
+                    )
+
+//                    .animation(.linear(duration: 1), value: intensity)
+//                    .animation(.linear(duration: 1), value: distance)
             }
+
+            Parameters(value: $intensity,
+                       name: Binding.constant("Intensity"),
+                       type: Binding.constant("Float"),
+                       description: Binding.constant("Effects the overall strength of the effect."),
+                       editatble: Binding.constant(true))
+
+            Parameters(value: $distance,
+                       name: Binding.constant("Distance"),
+                       type: Binding.constant("Float"),
+                       description: Binding.constant("Effects the overall strength of the effect."),
+                       editatble: Binding.constant(true))
         }
     }
 }

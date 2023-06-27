@@ -8,28 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		518EAA9D264EE37B00B057E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518EAA9C264EE37B00B057E5 /* Assets.xcassets */; };
+		F22525282A486E14005352D4 /* ShowcaseHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22525272A486E14005352D4 /* ShowcaseHeading.swift */; };
+		F225252A2A48896F005352D4 /* BadgeButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22525292A48896F005352D4 /* BadgeButtton.swift */; };
+		F22525302A49ABA8005352D4 /* BadgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225252F2A49ABA8005352D4 /* BadgeInformation.swift */; };
+		F22525402A49C566005352D4 /* Blur.metal in Sources */ = {isa = PBXBuildFile; fileRef = F225253F2A49C566005352D4 /* Blur.metal */; };
+		F22525422A49C579005352D4 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22525412A49C579005352D4 /* Blur.swift */; };
 		F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */; };
 		F29917732A4308B0005DBC70 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 516BF6E62A3A605700C821DF /* Shaders.metal */; };
 		F29917762A4308B0005DBC70 /* Sepia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB1102A4258A10010EBF7 /* Sepia.swift */; };
-		F29917772A4308B0005DBC70 /* Vignette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21878782A41DC5300640BAA /* Vignette.swift */; };
-		F29917782A4308B0005DBC70 /* SimpleWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB11D2A4300270010EBF7 /* SimpleWave.swift */; };
-		F29917792A4308B0005DBC70 /* ComplexWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB11F2A43002F0010EBF7 /* ComplexWave.swift */; };
-		F299177A2A4308B0005DBC70 /* Noise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21878802A41DCB200640BAA /* Noise.swift */; };
-		F299177B2A4308B0005DBC70 /* Emboss.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21878842A41DCE900640BAA /* Emboss.swift */; };
-		F299177C2A4308B0005DBC70 /* Checkerboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB1212A4300660010EBF7 /* Checkerboard.swift */; };
-		F299177E2A4308B0005DBC70 /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218787A2A41DC7300640BAA /* Waves.swift */; };
-		F299177F2A4308B0005DBC70 /* Pixellate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218787C2A41DC8300640BAA /* Pixellate.swift */; };
-		F29917802A4308B0005DBC70 /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218787E2A41DC9800640BAA /* Grayscale.swift */; };
 		F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */; };
 		F29917822A4308B0005DBC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA9A264EE37A00B057E5 /* ContentView.swift */; };
-		F29FE6482A448BBF00EAAC87 /* ShaderNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6472A448BBF00EAAC87 /* ShaderNavigationLink.swift */; };
 		F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */ = {isa = PBXBuildFile; fileRef = F29FE64F2A45942F00EAAC87 /* Sepia.metal */; };
-		F29FE6522A45B1B700EAAC87 /* Vignette.metal in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6512A45B1B700EAAC87 /* Vignette.metal */; };
 		F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6532A45B78F00EAAC87 /* Shader.swift */; };
-		F2B997622A46689100F872D3 /* MovingNumbersView in Frameworks */ = {isa = PBXBuildFile; productRef = F2B997612A46689100F872D3 /* MovingNumbersView */; };
 		F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */; };
 		F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */; };
-		F2B997682A47B64200F872D3 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997672A47B64200F872D3 /* Parameters.swift */; };
+		F2B997682A47B64200F872D3 /* ShowcaseParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997672A47B64200F872D3 /* ShowcaseParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,24 +33,18 @@
 		518EAA9A264EE37A00B057E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		518EAA9C264EE37B00B057E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MetalShaderShowcases/DemoAssets/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		518EAAA1264EE37B00B057E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MetalShaderShowcases/Info.plist; sourceTree = SOURCE_ROOT; };
-		F21878782A41DC5300640BAA /* Vignette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vignette.swift; sourceTree = "<group>"; };
-		F218787A2A41DC7300640BAA /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
-		F218787C2A41DC8300640BAA /* Pixellate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixellate.swift; sourceTree = "<group>"; };
-		F218787E2A41DC9800640BAA /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
-		F21878802A41DCB200640BAA /* Noise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noise.swift; sourceTree = "<group>"; };
-		F21878842A41DCE900640BAA /* Emboss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emboss.swift; sourceTree = "<group>"; };
+		F22525272A486E14005352D4 /* ShowcaseHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseHeading.swift; sourceTree = "<group>"; };
+		F22525292A48896F005352D4 /* BadgeButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeButtton.swift; sourceTree = "<group>"; };
+		F225252F2A49ABA8005352D4 /* BadgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeInformation.swift; sourceTree = "<group>"; };
+		F225253F2A49C566005352D4 /* Blur.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Blur.metal; sourceTree = "<group>"; };
+		F22525412A49C579005352D4 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseImage.swift; sourceTree = "<group>"; };
-		F29FE6472A448BBF00EAAC87 /* ShaderNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderNavigationLink.swift; sourceTree = "<group>"; };
 		F29FE64F2A45942F00EAAC87 /* Sepia.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sepia.metal; sourceTree = "<group>"; };
-		F29FE6512A45B1B700EAAC87 /* Vignette.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vignette.metal; sourceTree = "<group>"; };
 		F29FE6532A45B78F00EAAC87 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
 		F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChromaticAbberation.metal; sourceTree = "<group>"; };
 		F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticAbberation.swift; sourceTree = "<group>"; };
-		F2B997672A47B64200F872D3 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		F2B997672A47B64200F872D3 /* ShowcaseParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseParameters.swift; sourceTree = "<group>"; };
 		F2BCB1102A4258A10010EBF7 /* Sepia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepia.swift; sourceTree = "<group>"; };
-		F2BCB11D2A4300270010EBF7 /* SimpleWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWave.swift; sourceTree = "<group>"; };
-		F2BCB11F2A43002F0010EBF7 /* ComplexWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexWave.swift; sourceTree = "<group>"; };
-		F2BCB1212A4300660010EBF7 /* Checkerboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkerboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B997622A46689100F872D3 /* MovingNumbersView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,34 +100,44 @@
 		F21878772A41DC3600640BAA /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
-				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
-				F21878782A41DC5300640BAA /* Vignette.swift */,
-				F218787A2A41DC7300640BAA /* Waves.swift */,
-				F218787C2A41DC8300640BAA /* Pixellate.swift */,
-				F218787E2A41DC9800640BAA /* Grayscale.swift */,
-				F2BCB11D2A4300270010EBF7 /* SimpleWave.swift */,
-				F2BCB11F2A43002F0010EBF7 /* ComplexWave.swift */,
-				F21878802A41DCB200640BAA /* Noise.swift */,
-				F21878842A41DCE900640BAA /* Emboss.swift */,
-				F2BCB1212A4300660010EBF7 /* Checkerboard.swift */,
+				F225252D2A48CC0B005352D4 /* Color */,
+				F225252E2A48CC14005352D4 /* Layer */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
 		};
-		F29FE64D2A4593FC00EAAC87 /* Home */ = {
+		F225252C2A48CAEA005352D4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F29FE6472A448BBF00EAAC87 /* ShaderNavigationLink.swift */,
+				F22525292A48896F005352D4 /* BadgeButtton.swift */,
+				F225252F2A49ABA8005352D4 /* BadgeInformation.swift */,
 			);
-			path = Home;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F225252D2A48CC0B005352D4 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		F225252E2A48CC14005352D4 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
+				F22525412A49C579005352D4 /* Blur.swift */,
+			);
+			path = Layer;
 			sourceTree = "<group>";
 		};
 		F29FE64E2A45940F00EAAC87 /* Showcase */ = {
 			isa = PBXGroup;
 			children = (
 				F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */,
-				F2B997672A47B64200F872D3 /* Parameters.swift */,
+				F22525272A486E14005352D4 /* ShowcaseHeading.swift */,
+				F2B997672A47B64200F872D3 /* ShowcaseParameters.swift */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -157,8 +153,8 @@
 		F2BCB1122A42FE410010EBF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F225252C2A48CAEA005352D4 /* Components */,
 				F29FE64E2A45940F00EAAC87 /* Showcase */,
-				F29FE64D2A4593FC00EAAC87 /* Home */,
 				F21878772A41DC3600640BAA /* Shaders */,
 			);
 			path = Views;
@@ -175,12 +171,20 @@
 		F2BCB1152A42FED90010EBF7 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F2C646AF2A49E3BD002A9A99 /* Namedrop */,
 				516BF6E62A3A605700C821DF /* Shaders.metal */,
 				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
-				F29FE6512A45B1B700EAAC87 /* Vignette.metal */,
 				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
+				F225253F2A49C566005352D4 /* Blur.metal */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		F2C646AF2A49E3BD002A9A99 /* Namedrop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Namedrop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +204,6 @@
 			);
 			name = MetalShaderShowcases;
 			packageProductDependencies = (
-				F2B997612A46689100F872D3 /* MovingNumbersView */,
 			);
 			productName = SwiftUIByExample;
 			productReference = 518EAA95264EE37A00B057E5 /* MetalShaderShowcases.app */;
@@ -231,7 +234,6 @@
 			);
 			mainGroup = 518EAA8C264EE37A00B057E5;
 			packageReferences = (
-				F2B997602A46689100F872D3 /* XCRemoteSwiftPackageReference "MovingNumbersView" */,
 			);
 			productRefGroup = 518EAA96264EE37A00B057E5 /* Products */;
 			projectDirPath = "";
@@ -260,23 +262,17 @@
 			files = (
 				F29917732A4308B0005DBC70 /* Shaders.metal in Sources */,
 				F29917762A4308B0005DBC70 /* Sepia.swift in Sources */,
-				F29917772A4308B0005DBC70 /* Vignette.swift in Sources */,
-				F29917782A4308B0005DBC70 /* SimpleWave.swift in Sources */,
-				F29917792A4308B0005DBC70 /* ComplexWave.swift in Sources */,
-				F299177A2A4308B0005DBC70 /* Noise.swift in Sources */,
-				F299177B2A4308B0005DBC70 /* Emboss.swift in Sources */,
-				F299177C2A4308B0005DBC70 /* Checkerboard.swift in Sources */,
-				F2B997682A47B64200F872D3 /* Parameters.swift in Sources */,
-				F299177E2A4308B0005DBC70 /* Waves.swift in Sources */,
-				F29FE6522A45B1B700EAAC87 /* Vignette.metal in Sources */,
-				F29FE6482A448BBF00EAAC87 /* ShaderNavigationLink.swift in Sources */,
-				F299177F2A4308B0005DBC70 /* Pixellate.swift in Sources */,
+				F225252A2A48896F005352D4 /* BadgeButtton.swift in Sources */,
+				F2B997682A47B64200F872D3 /* ShowcaseParameters.swift in Sources */,
+				F22525282A486E14005352D4 /* ShowcaseHeading.swift in Sources */,
+				F22525302A49ABA8005352D4 /* BadgeInformation.swift in Sources */,
+				F22525402A49C566005352D4 /* Blur.metal in Sources */,
 				F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */,
 				F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */,
-				F29917802A4308B0005DBC70 /* Grayscale.swift in Sources */,
 				F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */,
 				F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */,
 				F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */,
+				F22525422A49C579005352D4 /* Blur.swift in Sources */,
 				F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */,
 				F29917822A4308B0005DBC70 /* ContentView.swift in Sources */,
 			);
@@ -473,25 +469,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F2B997602A46689100F872D3 /* XCRemoteSwiftPackageReference "MovingNumbersView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aunnnn/MovingNumbersView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F2B997612A46689100F872D3 /* MovingNumbersView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F2B997602A46689100F872D3 /* XCRemoteSwiftPackageReference "MovingNumbersView" */;
-			productName = MovingNumbersView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 518EAA8D264EE37A00B057E5 /* Project object */;
 }

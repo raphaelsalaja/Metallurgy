@@ -22,7 +22,7 @@ using namespace metal;
     return new_color;
 }
 
-[[ stitchable ]] half4 chromaticAbberationTime(float2 position, SwiftUI::Layer layer, float time) {
+[[ stitchable ]] half4 chromaticAbberationShift(float2 position, SwiftUI::Layer layer, float time) {
     
     half4 current_color = layer.sample(position);
     half4 new_color = current_color;
@@ -36,13 +36,13 @@ using namespace metal;
     
     amount = pow(amount, 3.0);
 
-    amount *= 0.05;
+    amount *= 0.75;
     
-    new_color.r = layer.sample(position + float2(amount/2, -amount/2)).r;
-    new_color.g = layer.sample(position - float2(amount/2, -amount/2)).g;
-    new_color.b = layer.sample(position - float2(amount/2, -amount/2)).b;
+    new_color.r = layer.sample(position + float2(amount/2.2, -amount/2)).r;
+    new_color.g = layer.sample(position - float2(amount/2, -amount/2.4)).g;
+    new_color.b = layer.sample(position - float2(amount/2, -amount/2.1)).b;
     
-    new_color *= (1.0 - amount * 0.5);
+   // new_color *= (1.0 - amount * 0.5);
     
     return new_color;
 }

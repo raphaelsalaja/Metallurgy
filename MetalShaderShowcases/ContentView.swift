@@ -4,9 +4,6 @@ import SwiftUI
 
 func LibraryView() -> some View {
     @State var shaders = ShaderShowcases().shaders
-    @State var categories = ShaderShowcases().categories
-
-    func dummyAction() {}
 
     return NavigationView {
         List {
@@ -63,7 +60,7 @@ struct ContentView: View {
                         Image(systemName: "gear")
                         Text("Settings")
                     }
-            }
+            }.searchable(text: .constant(""))
         }
     }
 }
