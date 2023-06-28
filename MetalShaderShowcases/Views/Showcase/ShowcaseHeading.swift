@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShowcaseHeading: View {
     @Binding var name: String
-    @Binding var category: BadgeType
+    @Binding var category: Categories
     @Binding var author: String
 
     var body: some View {
@@ -18,7 +18,8 @@ struct ShowcaseHeading: View {
                 Text(name).fontWeight(.medium)
 
                 Spacer()
-                BadgeButtton(type: $category)
+
+                CategoryButton(category: category)
             }
             Text("\(author)")
                 .font(.caption)
@@ -30,7 +31,7 @@ struct ShowcaseHeading: View {
 #Preview {
     ShowcaseHeading(
         name: .constant("Name"),
-        category: .constant(BadgeType.Float),
+        category: .constant(Categories.Color),
         author: .constant("Author")
     )
 }

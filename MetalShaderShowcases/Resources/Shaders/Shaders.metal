@@ -3,8 +3,7 @@
 
 using namespace metal;
 
-// MARK: - Raphael
-
+// MARK: - Swirl
 [[ stitchable ]] float2 swirl(float2 position, float time, float2 center, float radius, float angle) {
     float2 offset = position - center;
     
@@ -124,21 +123,6 @@ using namespace metal;
 }
 
 
-// MARK: - Paul Hudson
-
-[[ stitchable ]] float2 simpleWave(float2 position, float time) {
-    return position + float2 (sin(time + position.y / 20), sin(time + position.x / 20)) * 5;
-}
-
-[[ stitchable ]] float2 complexWave(float2 position, float time, float2 size, float speed, float strength, float frequency) {
-    float2 normalizedPosition = position / size;
-    float moveAmount = time * speed;
-
-    position.x += sin((normalizedPosition.x + moveAmount) * frequency) * strength;
-    position.y += cos((normalizedPosition.y + moveAmount) * frequency) * strength;
-
-    return position;
-}
 
 [[ stitchable ]] half4 checkerboard(float2 position, half4 currentColor, float size, half4 newColor) {
     uint2 posInChecks = uint2(position.x / size, position.y / size);

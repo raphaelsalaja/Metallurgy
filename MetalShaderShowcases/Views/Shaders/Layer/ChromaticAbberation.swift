@@ -11,7 +11,7 @@ struct ChromaticAbberation: View {
     @Binding var name: String
     @Binding var description: String
     @Binding var author: String
-    @Binding var category: BadgeType
+    @Binding var category: Categories
 
     @State var red: Float = 0
     @State var green: Float = 0
@@ -50,7 +50,7 @@ struct ChromaticAbberation: View {
                                 ),
                                 maxSampleOffset: .zero
                             )
-                            .background(.clear)
+                            .animation(.linear(duration: 1), value: startDate)
                     }
 
                     Picker("Version", selection: $state) {
@@ -62,32 +62,32 @@ struct ChromaticAbberation: View {
                 } footer: {}
 
                 if state == 0 {
-                    ShowcaseParameters(
+                    ShowcaseParameter(
                         value: $red,
                         name: Binding.constant("Red"),
-                        type: Binding.constant(BadgeType.Float),
+                        parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the red channel."),
                         editatble: Binding.constant(true)
                     )
-                    ShowcaseParameters(
+                    ShowcaseParameter(
                         value: $green,
                         name: Binding.constant("Green"),
-                        type: Binding.constant(BadgeType.Float),
+                        parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the green channel."),
                         editatble: Binding.constant(true)
                     )
-                    ShowcaseParameters(
+                    ShowcaseParameter(
                         value: $blue,
                         name: Binding.constant("Blue"),
-                        type: Binding.constant(BadgeType.Float),
+                        parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(true)
                     )
                 } else {
-                    ShowcaseParameters(
+                    ShowcaseParameter(
                         value: Binding.constant(0.5),
                         name: Binding.constant("Time"),
-                        type: Binding.constant(BadgeType.Float),
+                        parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Shifts the effect over time."),
                         editatble: Binding.constant(false)
                     )
@@ -102,6 +102,6 @@ struct ChromaticAbberation: View {
         name: .constant("Chromatic Abberation"),
         description: .constant("A chromatic abberation effect."),
         author: .constant("Raphael Salaja"),
-        category: .constant(BadgeType.Layer)
+        category: .constant(Categories.Layer)
     ).preferredColorScheme(/*@START_MENU_TOKEN@*/ .dark/*@END_MENU_TOKEN@*/)
 }

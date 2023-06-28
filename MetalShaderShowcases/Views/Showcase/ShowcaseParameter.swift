@@ -1,5 +1,5 @@
 //
-//  Parameters.swift
+//  Parameterss.swift
 //  MetalShaderShowcases
 //
 //  Created by Raphael S on 25/06/2023.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ShowcaseParameters: View {
+struct ShowcaseParameter: View {
     @Binding var value: Float
     @Binding var name: String
-    @Binding var type: BadgeType
+    @Binding var parameter: Parameters
     @Binding var description: String
     @Binding var editatble: Bool
 
@@ -21,7 +21,7 @@ struct ShowcaseParameters: View {
 
                 Spacer()
 
-                BadgeButtton(type: .constant(type))
+                ParameterButtton(parameter: parameter)
             }
 
             if editatble {
@@ -33,16 +33,16 @@ struct ShowcaseParameters: View {
             } else {}
 
         } header: {} footer: {
-            Text(description)
+            // Text(description)
         }
     }
 }
 
 #Preview {
-    ShowcaseParameters(
+    ShowcaseParameter(
         value: .constant(0.5),
         name: .constant("Name"),
-        type: .constant(BadgeType.Float),
+        parameter: .constant(Parameters.Float),
         description: .constant("Description"),
         editatble: .constant(true)
     )

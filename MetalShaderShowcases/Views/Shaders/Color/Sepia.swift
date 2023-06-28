@@ -10,18 +10,17 @@ import SwiftUI
 struct Sepia: View {
     @Binding var name: String
     @Binding var description: String
-    @Binding var author: String
-    @Binding var category: BadgeType
-
+    @Binding public var author: String
+    @Binding var category: Categories
     @State var strength: Float = 0
-    @State private var showingSheet = false
+    @State var showingSheet = false
 
     var body: some View {
         List {
             Section {
                 ShowcaseHeading(
                     name: .constant(name),
-                    category: .constant(BadgeType.Color),
+                    category: .constant(Categories.Color),
                     author: .constant(author)
                 )
 
@@ -30,10 +29,10 @@ struct Sepia: View {
                     .animation(.linear(duration: 1), value: strength)
             }
 
-            ShowcaseParameters(
+            ShowcaseParameter(
                 value: $strength,
                 name: Binding.constant("Strength"),
-                type: Binding.constant(BadgeType.Float),
+                parameter: Binding.constant(Parameters.Float),
                 description: Binding.constant("Effects the overall strength of the effect."),
                 editatble: Binding.constant(true)
             )
@@ -46,6 +45,6 @@ struct Sepia: View {
         name: .constant("Sepia"),
         description: .constant("A sepia tone effect."),
         author: .constant("Raphael Salaja"),
-        category: .constant(BadgeType.Float)
+        category: .constant(Categories.Color)
     )
 }

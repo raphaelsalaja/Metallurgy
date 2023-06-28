@@ -7,44 +7,37 @@
 
 import SwiftUI
 
-struct BadgeButtton: View {
-    @Binding var type: BadgeType
+struct CategoryButton: View {
+    var category: Categories
 
     @State var showingSheet = false
 
-    func getColor() -> Color {
-        switch type {
+    func getCategoryColor() -> Color {
+        switch category {
         case .Color:
             return Color.red
         case .Distortion:
             return Color.green
         case .Layer:
             return Color.blue
-        case .Float:
-            return Color.purple
-        case .Bool:
-            return Color.orange
         }
     }
 
     var body: some View {
-        Button(String(describing: type)) {
+        Button(String(describing: category)) {
             showingSheet.toggle()
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 5)
-        .background(getColor().tertiary)
-        .foregroundColor(getColor())
+        .background(getCategoryColor().tertiary)
+        .foregroundColor(getCategoryColor())
         .cornerRadius(20)
         .font(Font.caption.bold())
-        .sheet(isPresented: $showingSheet) {
-            BadgeInformation()
-        }
     }
 }
 
 #Preview {
-    BadgeButtton(
-        type: .constant(BadgeType.Float)
+    CategoryButton(
+        category: Categories.Color
     )
 }
