@@ -65,21 +65,21 @@ struct ChromaticAbberation: View {
                     ShowcaseParameter(
                         value: $red,
                         name: Binding.constant("Red"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the red channel."),
                         editatble: Binding.constant(true)
                     )
                     ShowcaseParameter(
                         value: $green,
                         name: Binding.constant("Green"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the green channel."),
                         editatble: Binding.constant(true)
                     )
                     ShowcaseParameter(
                         value: $blue,
                         name: Binding.constant("Blue"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(true)
                     )
@@ -87,7 +87,7 @@ struct ChromaticAbberation: View {
                     ShowcaseParameter(
                         value: Binding.constant(0.5),
                         name: Binding.constant("Time"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Shifts the effect over time."),
                         editatble: Binding.constant(false)
                     )

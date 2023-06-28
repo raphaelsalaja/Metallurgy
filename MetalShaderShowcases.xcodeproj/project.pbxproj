@@ -18,6 +18,7 @@
 		F259E6652A4B6D15006E7CF1 /* Toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6642A4B6D15006E7CF1 /* Toon.metal */; };
 		F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E6672A4B71E3006E7CF1 /* Waves.swift */; };
 		F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6692A4B71FD006E7CF1 /* Waves.metal */; };
+		F26F6ECE2A4CD4BF003C32C4 /* ShaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F6ECD2A4CD4BF003C32C4 /* ShaderView.swift */; };
 		F29917732A4308B0005DBC70 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 516BF6E62A3A605700C821DF /* Shaders.metal */; };
 		F29917762A4308B0005DBC70 /* Sepia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB1102A4258A10010EBF7 /* Sepia.swift */; };
 		F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */; };
@@ -47,6 +48,7 @@
 		F259E6642A4B6D15006E7CF1 /* Toon.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Toon.metal; sourceTree = "<group>"; };
 		F259E6672A4B71E3006E7CF1 /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
 		F259E6692A4B71FD006E7CF1 /* Waves.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Waves.metal; sourceTree = "<group>"; };
+		F26F6ECD2A4CD4BF003C32C4 /* ShaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderView.swift; sourceTree = "<group>"; };
 		F29FE64F2A45942F00EAAC87 /* Sepia.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sepia.metal; sourceTree = "<group>"; };
 		F29FE6532A45B78F00EAAC87 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
 		F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChromaticAbberation.metal; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				F259E6662A4B71CD006E7CF1 /* Distortion */,
 				F225252D2A48CC0B005352D4 /* Color */,
 				F225252E2A48CC14005352D4 /* Layer */,
+				F26F6ECD2A4CD4BF003C32C4 /* ShaderView.swift */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 		F24E928C2A4B87B400176603 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				518EAA9A264EE37A00B057E5 /* ContentView.swift */,
 				F259E65E2A4B12D5006E7CF1 /* DocumentationView.swift */,
 				F259E6622A4B3DB3006E7CF1 /* LibraryView.swift */,
 			);
@@ -178,7 +182,6 @@
 		F2BCB1122A42FE410010EBF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				518EAA9A264EE37A00B057E5 /* ContentView.swift */,
 				F24E928C2A4B87B400176603 /* Main */,
 				F225252C2A48CAEA005352D4 /* Components */,
 				F29FE64E2A45940F00EAAC87 /* Showcase */,
@@ -293,6 +296,7 @@
 				F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */,
 				F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */,
 				F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */,
+				F26F6ECE2A4CD4BF003C32C4 /* ShaderView.swift in Sources */,
 				F259E6652A4B6D15006E7CF1 /* Toon.metal in Sources */,
 				F259E6612A4B2655006E7CF1 /* CategoryButton.swift in Sources */,
 				F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */,

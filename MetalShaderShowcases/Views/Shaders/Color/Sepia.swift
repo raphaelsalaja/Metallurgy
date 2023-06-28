@@ -32,7 +32,7 @@ struct Sepia: View {
             ShowcaseParameter(
                 value: $strength,
                 name: Binding.constant("Strength"),
-                parameter: Binding.constant(Parameters.Float),
+               // parameter: Binding.constant(Parameters.Float),
                 description: Binding.constant("Effects the overall strength of the effect."),
                 editatble: Binding.constant(true)
             )

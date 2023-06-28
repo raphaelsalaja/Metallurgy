@@ -10,7 +10,7 @@ import SwiftUI
 struct ShowcaseParameter: View {
     @Binding var value: Float
     @Binding var name: String
-    @Binding var parameter: Parameters
+    // @Binding var parameter: Parameters
     @Binding var description: String
     @Binding var editatble: Bool
 
@@ -21,7 +21,7 @@ struct ShowcaseParameter: View {
 
                 Spacer()
 
-                ParameterButtton(parameter: parameter)
+                // ParameterButtton(parameter: parameter)
             }
 
             if editatble {
@@ -42,7 +42,7 @@ struct ShowcaseParameter: View {
     ShowcaseParameter(
         value: .constant(0.5),
         name: .constant("Name"),
-        parameter: .constant(Parameters.Float),
+//        parameter: .constant(Parameters.Float),
         description: .constant("Description"),
         editatble: .constant(true)
     )

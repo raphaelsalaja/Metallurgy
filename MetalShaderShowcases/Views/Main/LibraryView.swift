@@ -11,10 +11,10 @@ struct LibraryView: View {
     @State var shaders = ShaderShowcases().shaders
     @State var topExpanded = true
     @State private var selectedSorting = SortingOptions.Name
-    @State private var selectedCategory = Filters.Color
+    @State private var selectedCategory = Categories.Color
     @State private var searchText = ""
     @State private var sorted: [MetalShader] = []
-
+    
     func sortArray() {
         switch selectedSorting {
         case .Name:
@@ -23,15 +23,11 @@ struct LibraryView: View {
             sorted = shaders.sorted(by: { $0.name < $1.name })
         case .Category:
             sorted = shaders.sorted(by: { $0.name < $1.name })
-        case .Newest:
-            sorted = shaders.sorted(by: { $0.name < $1.name })
-        case .Oldest:
-            sorted = shaders.sorted(by: { $0.name < $1.name })
         case .Complexity:
             sorted = shaders.sorted(by: { $0.name < $1.name })
         }
     }
-
+    
     func filterArray() {
         switch selectedCategory {
         case .Color:
@@ -40,18 +36,16 @@ struct LibraryView: View {
             sorted = shaders.filter { $0.category == .Distortion }
         case .Layer:
             sorted = shaders.filter { $0.category == .Layer }
-        case .None:
-            sorted = shaders.filter { $0.category == .None }
         }
     }
-
+    
     var body: some View {
         NavigationView {
             List {
                 Section {
                     ForEach(shaders) { shader in
-                        NavigationLink(destination: shader.showcase) {
-                            Text(shader.name)
+                        NavigationLink(destination: ShaderView(data: .constant(shader))) {
+                            Text(shader.name).fontWeight(.medium)
                         }
                     }
                 }
@@ -66,15 +60,15 @@ struct LibraryView: View {
                                 }
                             }
                         }
-
+                        
                         Section {
                             Picker("Filters", selection: $selectedCategory) {
-                                ForEach(Filters.allCases) { option in
+                                ForEach(Categories.allCases) { option in
                                     Text(option.rawValue).tag(option)
                                 }
                             }
                         }
-
+                        
                     } label: {
                         Label("Sort by", systemImage: "ellipsis.circle")
                     }.menuStyle(BorderlessButtonMenuStyle())

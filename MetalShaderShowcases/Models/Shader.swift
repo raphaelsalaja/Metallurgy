@@ -2,32 +2,50 @@ import Foundation
 import Observation
 import SwiftUI
 
-enum Parameters {
+enum Parameters: String, CaseIterable, Identifiable {
+    var id: Self { return self }
+
     case Float
     case Integer
     case Bool
+
+    var title: String {
+        switch self {
+        case .Float:
+            return "Float"
+        case .Integer:
+            return "Integer"
+        case .Bool:
+            return "Bool"
+        }
+    }
 }
 
-enum Categories {
-    case Color
-    case Distortion
-    case Layer
-    case Mixed
-}
+enum Complexity: String, CaseIterable, Identifiable {
+    var id: Self { return self }
 
-enum Complexity {
     case Low
     case Medium
     case High
+
+    var title: String {
+        switch self {
+        case .Low:
+            return "Low"
+        case .Medium:
+            return "Medium"
+        case .High:
+            return "High"
+        }
+    }
 }
 
-enum Filters: String, CaseIterable, Identifiable {
+enum Categories: String, CaseIterable, Identifiable {
     var id: Self { return self }
 
     case Color
     case Distortion
     case Layer
-    case None
 
     var title: String {
         switch self {
@@ -37,8 +55,6 @@ enum Filters: String, CaseIterable, Identifiable {
             return "Distortion"
         case .Layer:
             return "Layer"
-        case .None:
-            return "None"
         }
     }
 }
@@ -68,18 +84,21 @@ enum SortingOptions: String, CaseIterable, Identifiable {
 @Observable
 struct MetalShader: Identifiable {
     var id = UUID()
-    let name: String
-    let author: String
-    let category: Categories
-    let complexity: Complexity
-    let showcase: AnyView
+    var name: String = ""
+    var description: String = ""
+    var author: String = ""
+    var category: Categories = .Color
+    var complexity: Complexity = .Low
+    var parameters = [String: (variableValue: Float, editable: Bool)]()
 
-    public init(name: String, showcase: AnyView) {
+    public init(id: UUID = UUID(), name: String, description: String, author: String, category: Categories, complexity: Complexity, parameters: [String: (variableValue: Float, editable: Bool)]) {
+        self.id = id
         self.name = name
-        self.author = "Unknown"
-        self.category = .Color
-        self.complexity = .Low
-        self.showcase = showcase
+        self.description = description
+        self.author = author
+        self.category = category
+        self.complexity = complexity
+        self.parameters = parameters
     }
 }
 
@@ -87,32 +106,11 @@ final class ShaderShowcases {
     var shaders: [MetalShader] = [
         MetalShader(
             name: "Sepia",
-            showcase: AnyView(Sepia(
-                name: .constant("Sepia"),
-                description: .constant("Sepia makes photos appear hazy, warm, and a bit sentimental. Inverting it makes the photo appear cooler."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Color)
-            ))
+            description: "Sepia makes photos appear hazy, warm, and a bit sentimental. Inverting it makes the photo appear cooler.",
+            author: "Raphael Salaja",
+            category: Categories.Color,
+            complexity: Complexity.Low,
+            parameters: ["Strength": (variableValue: 0.5, editable: true)]
         ),
-
-        MetalShader(
-            name: "Chromatic Aberration",
-            showcase: AnyView(ChromaticAbberation(
-                name: .constant("Chromatic Aberration"),
-                description: .constant("Chromatic aberration is a failure of a lens to focus all colors to the same point. It is caused by dispersion: the refractive index of the lens elements varies with the wavelength of light."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-
-        MetalShader(
-            name: "Waves",
-            showcase: AnyView(Waves(
-                name: .constant("Waves"),
-                description: .constant("Waves are a disturbance that transfers energy through matter or space, with little or no associated mass transport. They consist, instead, of oscillations or vibrations around almost fixed locations."),
-                author: .constant("Paul Hudson, Raphael Salaja"),
-                category: .constant(Categories.Distortion)
-            ))
-        )
     ]
 }

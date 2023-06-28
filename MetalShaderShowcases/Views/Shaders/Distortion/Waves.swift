@@ -65,7 +65,7 @@ struct Waves: View {
                     ShowcaseParameter(
                         value: Binding.constant(0.5),
                         name: Binding.constant("Time"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(false)
                     )
@@ -73,35 +73,35 @@ struct Waves: View {
                     ShowcaseParameter(
                         value: Binding.constant(0.5),
                         name: Binding.constant("Time"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(false)
                     )
                     ShowcaseParameter(
                         value: $size,
                         name: Binding.constant("Size"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the red channel."),
                         editatble: Binding.constant(true)
                     )
                     ShowcaseParameter(
                         value: $speed,
                         name: Binding.constant("Speed"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the green channel."),
                         editatble: Binding.constant(true)
                     )
                     ShowcaseParameter(
                         value: $strength,
                         name: Binding.constant("Strength"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(true)
                     )
                     ShowcaseParameter(
                         value: $frequency,
                         name: Binding.constant("Frequency"),
-                        parameter: Binding.constant(Parameters.Float),
+                        // parameter: Binding.constant(Parameters.Float),
                         description: Binding.constant("Effects the blue channel."),
                         editatble: Binding.constant(true)
                     )
