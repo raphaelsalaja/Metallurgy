@@ -2,32 +2,50 @@ import Foundation
 import Observation
 import SwiftUI
 
-enum Parameters {
+enum Parameters: String, CaseIterable, Identifiable {
+    var id: Self { return self }
+
     case Float
     case Integer
     case Bool
+
+    var title: String {
+        switch self {
+        case .Float:
+            return "Float"
+        case .Integer:
+            return "Integer"
+        case .Bool:
+            return "Bool"
+        }
+    }
 }
 
-enum Categories {
-    case Color
-    case Distortion
-    case Layer
-    case Mixed
-}
+enum Complexity: String, CaseIterable, Identifiable {
+    var id: Self { return self }
 
-enum Complexity {
     case Low
     case Medium
     case High
+
+    var title: String {
+        switch self {
+        case .Low:
+            return "Low"
+        case .Medium:
+            return "Medium"
+        case .High:
+            return "High"
+        }
+    }
 }
 
-enum Filters: String, CaseIterable, Identifiable {
+enum Categories: String, CaseIterable, Identifiable {
     var id: Self { return self }
 
     case Color
     case Distortion
     case Layer
-    case None
 
     var title: String {
         switch self {
@@ -37,8 +55,6 @@ enum Filters: String, CaseIterable, Identifiable {
             return "Distortion"
         case .Layer:
             return "Layer"
-        case .None:
-            return "None"
         }
     }
 }
@@ -69,16 +85,10 @@ enum SortingOptions: String, CaseIterable, Identifiable {
 struct MetalShader: Identifiable {
     var id = UUID()
     let name: String
-    let author: String
-    let category: Categories
-    let complexity: Complexity
     let showcase: AnyView
 
     public init(name: String, showcase: AnyView) {
         self.name = name
-        self.author = "Unknown"
-        self.category = .Color
-        self.complexity = .Low
         self.showcase = showcase
     }
 }

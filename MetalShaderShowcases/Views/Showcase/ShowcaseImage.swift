@@ -14,7 +14,7 @@ struct ShowcaseImage: View {
             .background(.clear)
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
-            .frame(height: 200)
+            .frame(height: 300)
     }
 }
 
