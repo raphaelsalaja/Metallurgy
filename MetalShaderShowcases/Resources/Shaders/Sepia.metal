@@ -1,15 +1,11 @@
-//
-//  Sepia.metal
-//  MetalShaderShowcases
-//
-//  Created by Raphael S on 23/06/2023.
-//
-
 #include <metal_stdlib>
 #include <SwiftUI/SwiftUI_Metal.h>
 
 using namespace metal;
 
+// Creator: Raphael Salaja
+// Twitter: https://twitter.com/rafunderscore/
+// Category: Layer
 [[ stitchable ]] half4 sepia(float2 position, half4 color, float strength) {
     half4 originalColor = color;
     half4 newColor = originalColor;

@@ -1,15 +1,11 @@
-//
-//  Chromatic Abberation.metal
-//  MetalShaderShowcases
-//
-//  Created by Raphael S on 24/06/2023.
-//
-
 #include <metal_stdlib>
 #include <SwiftUI/SwiftUI_Metal.h>
 
 using namespace metal;
 
+// Creator: Raphael Salaja
+// Twitter: https://twitter.com/rafunderscore/
+// Category: Layer
 [[ stitchable ]] half4 chromaticAbberation(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
     
     half4 current_color = layer.sample(position);
@@ -22,6 +18,9 @@ using namespace metal;
     return new_color;
 }
 
+// Creator: Raphael Salaja
+// Twitter: https://twitter.com/rafunderscore/
+// Category: Layer
 [[ stitchable ]] half4 chromaticAbberationShift(float2 position, SwiftUI::Layer layer, float time) {
     
     half4 current_color = layer.sample(position);

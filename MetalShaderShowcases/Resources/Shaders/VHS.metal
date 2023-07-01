@@ -58,11 +58,6 @@ float noise(float2 uv, float time)
     
     half4 col;
     
-    //  col.r = texture(iChannel0, crt_uv + float2(0., 0.01)).r;
-    //  col.g = texture(iChannel0, crt_uv).r;
-    //  col.b = texture(iChannel0, crt_uv + float2(0., -0.01)).b;
-    //  col.a = texture(iChannel0, crt_uv).a;
-    
     col.r = layer.sample(crt_uv + float2(0., 0.01)).r;
     col.g = layer.sample(crt_uv).g;
     col.b = layer.sample(crt_uv + float2(0., -0.01)).b;
@@ -78,5 +73,3 @@ float noise(float2 uv, float time)
     return final;
 
 }
-
- 

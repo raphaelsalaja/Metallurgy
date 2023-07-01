@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShowcaseImage: View {
     var body: some View {
-        Image(.finderBigSur)
+        Image(.showcase)
             .resizable()
             .background(.clear)
             .aspectRatio(contentMode: .fit)

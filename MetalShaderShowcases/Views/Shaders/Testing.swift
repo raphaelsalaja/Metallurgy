@@ -27,10 +27,10 @@ struct Retro: View {
                     )
 
                     ShowcaseImage()
-                        .layerEffect(ShaderLibrary.vhs(
-                            .float(time.timeIntervalSinceNow)
-                        ),
-                        maxSampleOffset: .zero)
+                        .layerEffect(ShaderLibrary.deepfry(
+                            .float(strength)
+                        ), maxSampleOffset: .zero)
+                        .animation(.linear(duration: 1), value: strength)
                 }
 
                 ShowcaseParameter(

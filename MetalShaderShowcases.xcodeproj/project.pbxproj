@@ -17,9 +17,9 @@
 		F259E6632A4B3DB3006E7CF1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E6622A4B3DB3006E7CF1 /* LibraryView.swift */; };
 		F259E6652A4B6D15006E7CF1 /* Toon.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6642A4B6D15006E7CF1 /* Toon.metal */; };
 		F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E6672A4B71E3006E7CF1 /* Waves.swift */; };
-		F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6692A4B71FD006E7CF1 /* Waves.metal */; };
-		F260EACB2A4CEB8800EA5E0F /* Aesthetic.metal in Sources */ = {isa = PBXBuildFile; fileRef = F260EACA2A4CEB8800EA5E0F /* Aesthetic.metal */; };
-		F260EACD2A4CEC2600EA5E0F /* Retro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F260EACC2A4CEC2600EA5E0F /* Retro.swift */; };
+		F259E66A2A4B71FD006E7CF1 /* Distortion.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6692A4B71FD006E7CF1 /* Distortion.metal */; };
+		F260EACB2A4CEB8800EA5E0F /* VHS.metal in Sources */ = {isa = PBXBuildFile; fileRef = F260EACA2A4CEB8800EA5E0F /* VHS.metal */; };
+		F260EACD2A4CEC2600EA5E0F /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F260EACC2A4CEC2600EA5E0F /* Testing.swift */; };
 		F29917762A4308B0005DBC70 /* Sepia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB1102A4258A10010EBF7 /* Sepia.swift */; };
 		F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */; };
 		F29917822A4308B0005DBC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA9A264EE37A00B057E5 /* ContentView.swift */; };
@@ -28,6 +28,24 @@
 		F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */; };
 		F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */; };
 		F2B997682A47B64200F872D3 /* ShowcaseParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */; };
+		F2DB79342A4ED59E00C2F727 /* VHSTEST.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79332A4ED59E00C2F727 /* VHSTEST.metal */; };
+		F2DB79362A4EE9B000C2F727 /* Lens.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79352A4EE9B000C2F727 /* Lens.metal */; };
+		F2DB79382A4EF19600C2F727 /* Contrast.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79372A4EF19600C2F727 /* Contrast.metal */; };
+		F2DB793B2A4F961B00C2F727 /* Invert.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB793A2A4F961B00C2F727 /* Invert.metal */; };
+		F2DB793F2A4F984800C2F727 /* Intensity.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB793E2A4F984800C2F727 /* Intensity.metal */; };
+		F2DB79412A4F98E300C2F727 /* Greyscale.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79402A4F98E300C2F727 /* Greyscale.metal */; };
+		F2DB79432A4F99B300C2F727 /* BlackLight.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79422A4F99B300C2F727 /* BlackLight.metal */; };
+		F2DB79452A4F99CB00C2F727 /* Swizzle.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79442A4F99CB00C2F727 /* Swizzle.metal */; };
+		F2DB79472A4F99F500C2F727 /* Deepfry.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79462A4F99F500C2F727 /* Deepfry.metal */; };
+		F2DB79492A4F9A7100C2F727 /* ColorChannel.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */; };
+		F2DB794D2A4F9A8D00C2F727 /* Dithering.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */; };
+		F2DB794F2A4F9AAB00C2F727 /* Bloom.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */; };
+		F2DB79532A4F9AC000C2F727 /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79522A4F9AC000C2F727 /* Posterize.metal */; };
+		F2DB79552A4F9ACD00C2F727 /* Infared.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79542A4F9ACD00C2F727 /* Infared.metal */; };
+		F2DB79572A4F9ADA00C2F727 /* Halftone.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79562A4F9ADA00C2F727 /* Halftone.metal */; };
+		F2DB79592A4F9AE500C2F727 /* EdgeDetection.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79582A4F9AE500C2F727 /* EdgeDetection.metal */; };
+		F2DB795B2A4F9AF100C2F727 /* Kaleidoscope.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB795A2A4F9AF100C2F727 /* Kaleidoscope.metal */; };
+		F2F56F482A4FA54F00849DBE /* Glitch.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2F56F472A4FA54F00849DBE /* Glitch.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,15 +64,33 @@
 		F259E6622A4B3DB3006E7CF1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		F259E6642A4B6D15006E7CF1 /* Toon.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Toon.metal; sourceTree = "<group>"; };
 		F259E6672A4B71E3006E7CF1 /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
-		F259E6692A4B71FD006E7CF1 /* Waves.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Waves.metal; sourceTree = "<group>"; };
-		F260EACA2A4CEB8800EA5E0F /* Aesthetic.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Aesthetic.metal; sourceTree = "<group>"; };
-		F260EACC2A4CEC2600EA5E0F /* Retro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Retro.swift; sourceTree = "<group>"; };
+		F259E6692A4B71FD006E7CF1 /* Distortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Distortion.metal; sourceTree = "<group>"; };
+		F260EACA2A4CEB8800EA5E0F /* VHS.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VHS.metal; sourceTree = "<group>"; };
+		F260EACC2A4CEC2600EA5E0F /* Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		F29FE64F2A45942F00EAAC87 /* Sepia.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sepia.metal; sourceTree = "<group>"; };
 		F29FE6532A45B78F00EAAC87 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
 		F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChromaticAbberation.metal; sourceTree = "<group>"; };
 		F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticAbberation.swift; sourceTree = "<group>"; };
 		F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseParameter.swift; sourceTree = "<group>"; };
 		F2BCB1102A4258A10010EBF7 /* Sepia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepia.swift; sourceTree = "<group>"; };
+		F2DB79332A4ED59E00C2F727 /* VHSTEST.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VHSTEST.metal; sourceTree = "<group>"; };
+		F2DB79352A4EE9B000C2F727 /* Lens.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Lens.metal; sourceTree = "<group>"; };
+		F2DB79372A4EF19600C2F727 /* Contrast.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Contrast.metal; sourceTree = "<group>"; };
+		F2DB793A2A4F961B00C2F727 /* Invert.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Invert.metal; sourceTree = "<group>"; };
+		F2DB793E2A4F984800C2F727 /* Intensity.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Intensity.metal; sourceTree = "<group>"; };
+		F2DB79402A4F98E300C2F727 /* Greyscale.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Greyscale.metal; sourceTree = "<group>"; };
+		F2DB79422A4F99B300C2F727 /* BlackLight.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BlackLight.metal; sourceTree = "<group>"; };
+		F2DB79442A4F99CB00C2F727 /* Swizzle.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Swizzle.metal; sourceTree = "<group>"; };
+		F2DB79462A4F99F500C2F727 /* Deepfry.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Deepfry.metal; sourceTree = "<group>"; };
+		F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorChannel.metal; sourceTree = "<group>"; };
+		F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Dithering.metal; sourceTree = "<group>"; };
+		F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Bloom.metal; sourceTree = "<group>"; };
+		F2DB79522A4F9AC000C2F727 /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Posterize.metal; sourceTree = "<group>"; };
+		F2DB79542A4F9ACD00C2F727 /* Infared.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Infared.metal; sourceTree = "<group>"; };
+		F2DB79562A4F9ADA00C2F727 /* Halftone.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Halftone.metal; sourceTree = "<group>"; };
+		F2DB79582A4F9AE500C2F727 /* EdgeDetection.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = EdgeDetection.metal; sourceTree = "<group>"; };
+		F2DB795A2A4F9AF100C2F727 /* Kaleidoscope.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Kaleidoscope.metal; sourceTree = "<group>"; };
+		F2F56F472A4FA54F00849DBE /* Glitch.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Glitch.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +145,7 @@
 		F21878772A41DC3600640BAA /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F260EACC2A4CEC2600EA5E0F /* Testing.swift */,
 				F259E6662A4B71CD006E7CF1 /* Distortion */,
 				F225252D2A48CC0B005352D4 /* Color */,
 				F225252E2A48CC14005352D4 /* Layer */,
@@ -137,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
-				F260EACC2A4CEC2600EA5E0F /* Retro.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -201,11 +237,29 @@
 		F2BCB1152A42FED90010EBF7 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F259E6642A4B6D15006E7CF1 /* Toon.metal */,
-				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
+				F2DB79422A4F99B300C2F727 /* BlackLight.metal */,
+				F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */,
 				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
-				F259E6692A4B71FD006E7CF1 /* Waves.metal */,
-				F260EACA2A4CEB8800EA5E0F /* Aesthetic.metal */,
+				F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */,
+				F2DB79372A4EF19600C2F727 /* Contrast.metal */,
+				F2DB79462A4F99F500C2F727 /* Deepfry.metal */,
+				F259E6692A4B71FD006E7CF1 /* Distortion.metal */,
+				F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */,
+				F2DB79582A4F9AE500C2F727 /* EdgeDetection.metal */,
+				F2F56F472A4FA54F00849DBE /* Glitch.metal */,
+				F2DB79402A4F98E300C2F727 /* Greyscale.metal */,
+				F2DB79562A4F9ADA00C2F727 /* Halftone.metal */,
+				F2DB79542A4F9ACD00C2F727 /* Infared.metal */,
+				F2DB793E2A4F984800C2F727 /* Intensity.metal */,
+				F2DB793A2A4F961B00C2F727 /* Invert.metal */,
+				F2DB795A2A4F9AF100C2F727 /* Kaleidoscope.metal */,
+				F2DB79352A4EE9B000C2F727 /* Lens.metal */,
+				F2DB79522A4F9AC000C2F727 /* Posterize.metal */,
+				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
+				F2DB79442A4F99CB00C2F727 /* Swizzle.metal */,
+				F259E6642A4B6D15006E7CF1 /* Toon.metal */,
+				F260EACA2A4CEB8800EA5E0F /* VHS.metal */,
+				F2DB79332A4ED59E00C2F727 /* VHSTEST.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -285,24 +339,42 @@
 			files = (
 				F29917762A4308B0005DBC70 /* Sepia.swift in Sources */,
 				F225252A2A48896F005352D4 /* ParameterButtton.swift in Sources */,
+				F2DB794D2A4F9A8D00C2F727 /* Dithering.metal in Sources */,
 				F2B997682A47B64200F872D3 /* ShowcaseParameter.swift in Sources */,
+				F2DB79412A4F98E300C2F727 /* Greyscale.metal in Sources */,
+				F2DB794F2A4F9AAB00C2F727 /* Bloom.metal in Sources */,
 				F22525282A486E14005352D4 /* ShowcaseHeading.swift in Sources */,
 				F259E65F2A4B12D5006E7CF1 /* DocumentationView.swift in Sources */,
-				F260EACB2A4CEB8800EA5E0F /* Aesthetic.metal in Sources */,
+				F2DB793F2A4F984800C2F727 /* Intensity.metal in Sources */,
+				F2DB79592A4F9AE500C2F727 /* EdgeDetection.metal in Sources */,
+				F2DB795B2A4F9AF100C2F727 /* Kaleidoscope.metal in Sources */,
+				F2DB79492A4F9A7100C2F727 /* ColorChannel.metal in Sources */,
+				F260EACB2A4CEB8800EA5E0F /* VHS.metal in Sources */,
 				F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */,
 				F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */,
 				F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */,
 				F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */,
-				F260EACD2A4CEC2600EA5E0F /* Retro.swift in Sources */,
-				F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */,
+				F260EACD2A4CEC2600EA5E0F /* Testing.swift in Sources */,
+				F2DB79362A4EE9B000C2F727 /* Lens.metal in Sources */,
+				F259E66A2A4B71FD006E7CF1 /* Distortion.metal in Sources */,
+				F2DB793B2A4F961B00C2F727 /* Invert.metal in Sources */,
+				F2DB79382A4EF19600C2F727 /* Contrast.metal in Sources */,
 				F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */,
+				F2DB79472A4F99F500C2F727 /* Deepfry.metal in Sources */,
+				F2DB79452A4F99CB00C2F727 /* Swizzle.metal in Sources */,
 				F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */,
+				F2DB79532A4F9AC000C2F727 /* Posterize.metal in Sources */,
 				F259E6652A4B6D15006E7CF1 /* Toon.metal in Sources */,
 				F259E6612A4B2655006E7CF1 /* CategoryButton.swift in Sources */,
+				F2F56F482A4FA54F00849DBE /* Glitch.metal in Sources */,
+				F2DB79432A4F99B300C2F727 /* BlackLight.metal in Sources */,
 				F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */,
+				F2DB79342A4ED59E00C2F727 /* VHSTEST.metal in Sources */,
 				F259E6632A4B3DB3006E7CF1 /* LibraryView.swift in Sources */,
+				F2DB79572A4F9ADA00C2F727 /* Halftone.metal in Sources */,
 				F29917822A4308B0005DBC70 /* ContentView.swift in Sources */,
 				F24E928E2A4B883300176603 /* ShowcaseLink.swift in Sources */,
+				F2DB79552A4F9ACD00C2F727 /* Infared.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
