@@ -96,15 +96,32 @@ struct MetalShader: Identifiable {
 final class ShaderShowcases {
     var shaders: [MetalShader] = [
         MetalShader(
-            name: "Sepia",
-            showcase: AnyView(Sepia(
-                name: .constant("Sepia"),
-                description: .constant("Sepia makes photos appear hazy, warm, and a bit sentimental. Inverting it makes the photo appear cooler."),
+            name: "Blacklight",
+            showcase: AnyView(Blacklight(
+                name: .constant("Blacklight"),
+                description: .constant("Blacklight is a lamp that emits long-wave ultraviolet light and very little visible light."),
                 author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Color)
+                category: .constant(Categories.Layer)
             ))
         ),
-
+        MetalShader(
+            name: "Bloom",
+            showcase: AnyView(Bloom(
+                name: .constant("Bloom"),
+                description: .constant("Bloom is a graphics effect used to reproduce an imaging artifact of real-world cameras."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Blur",
+            showcase: AnyView(Blur(
+                name: .constant("Blur"),
+                description: .constant("Blur is a common image processing operation. It is used to reduce image noise and reduce detail."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
         MetalShader(
             name: "Chromatic Aberration",
             showcase: AnyView(ChromaticAbberation(
@@ -114,14 +131,220 @@ final class ShaderShowcases {
                 category: .constant(Categories.Layer)
             ))
         ),
-
         MetalShader(
-            name: "Waves",
-            showcase: AnyView(Waves(
-                name: .constant("Waves"),
-                description: .constant("Waves are a disturbance that transfers energy through matter or space, with little or no associated mass transport. They consist, instead, of oscillations or vibrations around almost fixed locations."),
-                author: .constant("Paul Hudson, Raphael Salaja"),
-                category: .constant(Categories.Distortion)
+            name: "Color Channel Mixer",
+            showcase: AnyView(ColorChannelMixer(
+                name: .constant("Color Channel Mixer"),
+                description: .constant("Color Channel Mixer is a filter that allows you to mix the red, green, and blue channels of an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Contrast",
+            showcase: AnyView(Contrast(
+                name: .constant("Contrast"),
+                description: .constant("Contrast is the difference in luminance or color that makes an object distinguishable."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Deepfry",
+            showcase: AnyView(Deepfry(
+                name: .constant("Deepfry"),
+                description: .constant("Deepfry is a filter that makes an image appear as if it was deep fried."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Distortion",
+            showcase: AnyView(Distortion(
+                name: .constant("Distortion"),
+                description: .constant("Distortion is a filter that distorts an image by moving the pixels in a direction and amount specified by a texture."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Dithering",
+            showcase: AnyView(Dithering(
+                name: .constant("Dithering"),
+                description: .constant("Dithering is a technique used in computer graphics to create the illusion of color depth in images with a limited color palette."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Edge Detection",
+            showcase: AnyView(EdgeDetection(
+                name: .constant("Edge Detection"),
+                description: .constant("Edge Detection is a filter that highlights the edges of an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Emboss",
+            showcase: AnyView(Emboss(
+                name: .constant("Emboss"),
+                description: .constant("Emboss is a filter that embosses an image by placing a highlight on one side of edges and a shadow on the other."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Exposure",
+            showcase: AnyView(Exposure(
+                name: .constant("Exposure"),
+                description: .constant("Exposure is a filter that adjusts the exposure setting of an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Glitch",
+            showcase: AnyView(Glitch(
+                name: .constant("Glitch"),
+                description: .constant("Glitch is a filter that distorts an image by moving the pixels in a direction and amount specified by a texture."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Glow",
+            showcase: AnyView(Glow(
+                name: .constant("Glow"),
+                description: .constant("Glow is a filter that adds a glow to an image by placing a highlight on one side of edges and a shadow on the other."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Greyscale",
+            showcase: AnyView(Greyscale(
+                name: .constant("Greyscale"),
+                description: .constant("Greyscale is a filter that converts an image to greyscale."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Halftone",
+            showcase: AnyView(Halftone(
+                name: .constant("Halftone"),
+                description: .constant("Halftone is a filter that converts an image to halftone."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Infrared",
+            showcase: AnyView(Infrared(
+                name: .constant("Infrared"),
+                description: .constant("Infrared is a filter that converts an image to infrared."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Intensity",
+            showcase: AnyView(Intensity(
+                name: .constant("Intensity"),
+                description: .constant("Intensity is a filter that adjusts the intensity setting of an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Invert",
+            showcase: AnyView(Invert(
+                name: .constant("Invert"),
+                description: .constant("Invert is a filter that inverts the colors of an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Kaleidoscope",
+            showcase: AnyView(Kaleidoscope(
+                name: .constant("Kaleidoscope"),
+                description: .constant("Kaleidoscope is a filter that creates a kaleidoscope effect."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Lens Flare",
+            showcase: AnyView(LensFlare(
+                name: .constant("Lens Flare"),
+                description: .constant("Lens Flare is a filter that creates a lens flare effect."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Loupe",
+            showcase: AnyView(Loupe(
+                name: .constant("Loupe"),
+                description: .constant("Loupe is a filter that creates a loupe effect."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Posterize",
+            showcase: AnyView(Posterize(
+                name: .constant("Posterize"),
+                description: .constant("Posterize is a filter that posterizes an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Pixellate",
+            showcase: AnyView(Pixellate(
+                name: .constant("Pixellate"),
+                description: .constant("Pixellate is a filter that pixellates an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Sepia",
+            showcase: AnyView(Sepia(
+                name: .constant("Sepia"),
+                description: .constant("Sepia is a filter that converts an image to sepia."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Toon",
+            showcase: AnyView(Toon(
+                name: .constant("Toon"),
+                description: .constant("Toon is a filter that converts an image to toon."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "VHS",
+            showcase: AnyView(VHS(
+                name: .constant("VHS"),
+                description: .constant("VHS is a filter that converts an image to VHS."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Vignette",
+            showcase: AnyView(Vignette(
+                name: .constant("Vignette"),
+                description: .constant("Vignette is a filter that adds a vignette to an image."),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
             ))
         )
     ]

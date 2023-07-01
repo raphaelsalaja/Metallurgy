@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wave",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jtrivedi/Wave",
+      "state" : {
+        "revision" : "d95ce41fa52c42d9790388e9086c892930e9e48b",
+        "version" : "0.3.2"
+      }
+    }
+  ],
+  "version" : 2
+}
