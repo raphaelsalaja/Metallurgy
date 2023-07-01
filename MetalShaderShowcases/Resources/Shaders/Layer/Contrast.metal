@@ -7,7 +7,7 @@ using namespace metal;
 // Porter: Raphael Salaja
 // Source: https://www.shadertoy.com/view/Wlt3zS
 // Category: Layer
-[[ stitchable ]] half4 contrast(float2 position, SwiftUI::Layer layer, float strength) {
+[[ stitchable ]] half4 contrast_layer(float2 position, SwiftUI::Layer layer, float strength) {
     half3 color = layer.sample(position).rgb;
     
     color -= 0.5;

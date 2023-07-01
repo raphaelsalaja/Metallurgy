@@ -8,7 +8,7 @@
 import SwiftUI
 import Wave
 
-struct Retro: View {
+struct Loupe: View {
     @Binding var name: String
     @Binding var description: String
     @Binding var author: String
@@ -157,7 +157,7 @@ struct Retro: View {
 }
 
 #Preview {
-    Retro(
+    Loupe(
         name: .constant("Chromatic Abberation"),
         description: .constant("A chromatic abberation effect."),
         author: .constant("Raphael Salaja"),

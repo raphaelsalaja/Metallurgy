@@ -3,8 +3,9 @@
 
 using namespace metal;
 
-// Creator: Raphael Salaja
-// Twitter: https://twitter.com/rafunderscore/
+// Creator: leviathwaite
+// Porter: Raphael Salaja
+// Source: https://www.shadertoy.com/view/Wlt3zS
 // Category: Layer
 [[ stitchable ]] half4 multiply_color_channel(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
     half4 current_color = layer.sample(position);

@@ -114,15 +114,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Blur",
-            showcase: AnyView(Blur(
-                name: .constant("Blur"),
-                description: .constant("Blur is a common image processing operation. It is used to reduce image noise and reduce detail."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
             name: "Chromatic Aberration",
             showcase: AnyView(ChromaticAbberation(
                 name: .constant("Chromatic Aberration"),
@@ -159,8 +150,8 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Distortion",
-            showcase: AnyView(Distortion(
+            name: "Distortion Waves",
+            showcase: AnyView(Waves(
                 name: .constant("Distortion"),
                 description: .constant("Distortion is a filter that distorts an image by moving the pixels in a direction and amount specified by a texture."),
                 author: .constant("Raphael Salaja"),
@@ -186,24 +177,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Emboss",
-            showcase: AnyView(Emboss(
-                name: .constant("Emboss"),
-                description: .constant("Emboss is a filter that embosses an image by placing a highlight on one side of edges and a shadow on the other."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Exposure",
-            showcase: AnyView(Exposure(
-                name: .constant("Exposure"),
-                description: .constant("Exposure is a filter that adjusts the exposure setting of an image."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
             name: "Glitch",
             showcase: AnyView(Glitch(
                 name: .constant("Glitch"),
@@ -212,15 +185,7 @@ final class ShaderShowcases {
                 category: .constant(Categories.Layer)
             ))
         ),
-        MetalShader(
-            name: "Glow",
-            showcase: AnyView(Glow(
-                name: .constant("Glow"),
-                description: .constant("Glow is a filter that adds a glow to an image by placing a highlight on one side of edges and a shadow on the other."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
+
         MetalShader(
             name: "Greyscale",
             showcase: AnyView(Greyscale(
@@ -267,15 +232,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Kaleidoscope",
-            showcase: AnyView(Kaleidoscope(
-                name: .constant("Kaleidoscope"),
-                description: .constant("Kaleidoscope is a filter that creates a kaleidoscope effect."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
             name: "Lens Flare",
             showcase: AnyView(LensFlare(
                 name: .constant("Lens Flare"),
@@ -303,15 +259,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Pixellate",
-            showcase: AnyView(Pixellate(
-                name: .constant("Pixellate"),
-                description: .constant("Pixellate is a filter that pixellates an image."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
             name: "Sepia",
             showcase: AnyView(Sepia(
                 name: .constant("Sepia"),
@@ -325,24 +272,6 @@ final class ShaderShowcases {
             showcase: AnyView(Toon(
                 name: .constant("Toon"),
                 description: .constant("Toon is a filter that converts an image to toon."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "VHS",
-            showcase: AnyView(VHS(
-                name: .constant("VHS"),
-                description: .constant("VHS is a filter that converts an image to VHS."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Vignette",
-            showcase: AnyView(Vignette(
-                name: .constant("Vignette"),
-                description: .constant("Vignette is a filter that adds a vignette to an image."),
                 author: .constant("Raphael Salaja"),
                 category: .constant(Categories.Layer)
             ))

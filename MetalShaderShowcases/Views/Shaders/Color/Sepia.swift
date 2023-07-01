@@ -1,10 +1,3 @@
-//
-//  Waves.swift
-//  SwiftUIByExample
-//
-//  Created by Raphael S on 20/06/2023.
-//
-
 import SwiftUI
 
 struct Sepia: View {
