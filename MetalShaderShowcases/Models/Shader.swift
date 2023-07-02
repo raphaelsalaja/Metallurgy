@@ -177,16 +177,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Glitch",
-            showcase: AnyView(Glitch(
-                name: .constant("Glitch"),
-                description: .constant("Glitch is a filter that distorts an image by moving the pixels in a direction and amount specified by a texture."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-
-        MetalShader(
             name: "Greyscale",
             showcase: AnyView(Greyscale(
                 name: .constant("Greyscale"),
@@ -227,15 +217,6 @@ final class ShaderShowcases {
             showcase: AnyView(Invert(
                 name: .constant("Invert"),
                 description: .constant("Invert is a filter that inverts the colors of an image."),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Lens Flare",
-            showcase: AnyView(LensFlare(
-                name: .constant("Lens Flare"),
-                description: .constant("Lens Flare is a filter that creates a lens flare effect."),
                 author: .constant("Raphael Salaja"),
                 category: .constant(Categories.Layer)
             ))

@@ -21,8 +21,28 @@ struct LibraryView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        shaders = ShaderShowcases().shaders
+                    }) {
+                        Image(systemName: "ellipsis")
+                    }
+                }
+
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        shaders = ShaderShowcases().shaders
+                    }) {
+                        Image(systemName: "arrow.up.arrow.down")
+                    }
+                }
+            }
+            .searchable(text: .constant(""),
+                        placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: "Search")
             .navigationTitle("Library")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.automatic)
         }
     }
 }

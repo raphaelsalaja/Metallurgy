@@ -13,6 +13,7 @@ struct ShowcaseParameter: View {
     @Binding var parameter: Parameters
     @Binding var description: String
     @Binding var editatble: Bool
+    @Binding var range: ClosedRange<Float>
 
     var body: some View {
         Section {
@@ -25,15 +26,12 @@ struct ShowcaseParameter: View {
             }
 
             if editatble {
-                Slider(value: $value, in: -10 ... 10, step: 0.5) {} minimumValueLabel: {
-                    Text("-10")
+                Slider(value: $value, in: range, step: 0.5) {} minimumValueLabel: {
+                    Text(range.lowerBound, format: .number.precision(.fractionLength(0)))
                 } maximumValueLabel: {
-                    Text("10")
+                    Text(range.upperBound, format: .number.precision(.fractionLength(0)))
                 }
             } else {}
-
-        } header: {} footer: {
-            // Text(description)
         }
     }
 }
@@ -44,6 +42,7 @@ struct ShowcaseParameter: View {
         name: .constant("Name"),
         parameter: .constant(Parameters.Float),
         description: .constant("Description"),
-        editatble: .constant(true)
+        editatble: .constant(true),
+        range: .constant(0.1 ... 10)
     )
 }
