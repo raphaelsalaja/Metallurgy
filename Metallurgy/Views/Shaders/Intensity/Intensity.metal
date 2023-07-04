@@ -4,11 +4,11 @@
 using namespace metal;
 
 [[ stitchable ]] half4 intensity(float2 position, SwiftUI::Layer layer, float strength) {
-    half4 old_color =  layer.sample(position);
+    half4 original_color =  layer.sample(position);
     
     if(strength == 0.0) {
-        return old_color;
+        return original_color;
     }
     
-    return old_color * strength;
+    return original_color * strength;
 }

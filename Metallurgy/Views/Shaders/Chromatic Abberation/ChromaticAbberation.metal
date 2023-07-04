@@ -3,9 +3,9 @@
 
 using namespace metal;
 
-[[ stitchable ]] half4 chromaticAbberation(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
-    half4 current_color = layer.sample(position);
-    half4 new_color = current_color;
+[[ stitchable ]] half4 chromatic_abberation(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
+    half4 original_color = layer.sample(position);
+    half4 new_color = original_color;
     
     new_color.r = layer.sample(position - float2(red, -red)).r;
     new_color.g = layer.sample(position - float2(green, -green)).g;
@@ -16,9 +16,9 @@ using namespace metal;
 }
 
 
-[[ stitchable ]] half4 chromaticAbberationShift(float2 position, SwiftUI::Layer layer, float time) {
-    half4 current_color = layer.sample(position);
-    half4 new_color = current_color;
+[[ stitchable ]] half4 chromatic_abberation_shift(float2 position, SwiftUI::Layer layer, float time) {
+    half4 original_color = layer.sample(position);
+    half4 new_color = original_color;
     
     float amount = 0.0;
     

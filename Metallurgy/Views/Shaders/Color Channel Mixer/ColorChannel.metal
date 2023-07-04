@@ -4,14 +4,14 @@
 using namespace metal;
 
 [[ stitchable ]] half4 multiply_color_channel(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
-    half4 current_color = layer.sample(position);
-    half4 new_color = current_color;
+    half4 original_color = layer.sample(position);
+    half4 new_color = original_color;
     
-    new_color.r = current_color.r * red;
+    new_color.r = original_color.r * red;
     
-    new_color.g = current_color.g * green;
+    new_color.g = original_color.g * green;
     
-    new_color.b = current_color.b * blue;
+    new_color.b = original_color.b * blue;
     
     return new_color;
 }

@@ -232,9 +232,17 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Toon",
-            showcase: AnyView(Toon(
-                name: .constant("Toon"),
+            name: "Static Noise",
+            showcase: AnyView(StaticNoise(
+                name: .constant("Static Noise"),
+                author: .constant("Raphael Salaja"),
+                category: .constant(Categories.Layer)
+            ))
+        ),
+        MetalShader(
+            name: "Random Colors",
+            showcase: AnyView(RandomColors(
+                name: .constant("Random Colors"),
                 author: .constant("Raphael Salaja"),
                 category: .constant(Categories.Layer)
             ))

@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ShowcaseImage: View {
+struct ShowcaseVideo: View {
     var body: some View {
-        Image(.car)
+        Image(.finder)
             .resizable()
+            .background(.clear)
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
             .frame(height: 200)
@@ -18,5 +19,5 @@ struct ShowcaseImage: View {
 }
 
 #Preview {
-    ShowcaseImage()
+    ShowcaseVideo()
 }

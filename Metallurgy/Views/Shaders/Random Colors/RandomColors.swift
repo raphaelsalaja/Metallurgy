@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct Scanlines: View {
+struct RandomColors: View {
     @Binding var name: String
     @Binding var author: String
     @Binding var category: Categories
 
-    @State var strength: Float = 0
-    @State var time = Date()
+    @State var amount: Float = 10.0
+    @State var strength: Float = 1.0
 
     var body: some View {
         TimelineView(.animation) { _ in
@@ -17,23 +17,34 @@ struct Scanlines: View {
                         category: .constant(category),
                         author: .constant(author)
                     )
-
-                    ShowcaseImage()
+           
+                    Image(.car)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxWidth: .infinity)
                         .layerEffect(
-                            ShaderLibrary.vhs(
-                                .float(time.timeIntervalSinceNow)
+                            ShaderLibrary.random(
+                                .float(amount),
+                                .float(strength)
                             ),
                             maxSampleOffset: .zero
                         )
+                        .animation(.linear(duration: 1), value: amount)
                         .animation(.linear(duration: 1), value: strength)
+                        .listRowInsets(EdgeInsets())
                 }
 
                 ShowcaseParameter(
+                    value: $amount,
+                    name: Binding.constant("Colors Amount"),
+                    editatble: Binding.constant(true),
+                    range: Binding.constant(0 ... 100)
+                )
+                ShowcaseParameter(
                     value: $strength,
                     name: Binding.constant("Strength"),
-                    
                     editatble: Binding.constant(true),
-                    range: Binding.constant(0 ... 10)
+                    range: Binding.constant(0 ... 1)
                 )
             }
         }
@@ -41,9 +52,9 @@ struct Scanlines: View {
 }
 
 #Preview {
-    Scanlines(
-        name: .constant("Scanlines"),
+    RandomColors(
+        name: .constant("Random Colors"),
         author: .constant("Raphael Salaja"),
         category: .constant(Categories.Layer)
-    )
+    ).preferredColorScheme(.dark)
 }

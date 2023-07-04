@@ -1,10 +1,3 @@
-//
-//  Waves.swift
-//  SwiftUIByExample
-//
-//  Created by Raphael S on 20/06/2023.
-//
-
 import SwiftUI
 
 struct ChromaticAbberation: View {
@@ -33,7 +26,7 @@ struct ChromaticAbberation: View {
                     if state == 0 {
                         ShowcaseImage()
                             .layerEffect(
-                                ShaderLibrary.chromaticAbberation(
+                                ShaderLibrary.chromatic_abberation(
                                     .float(red),
                                     .float(green),
                                     .float(blue)
@@ -46,7 +39,7 @@ struct ChromaticAbberation: View {
                     } else {
                         ShowcaseImage()
                             .layerEffect(
-                                ShaderLibrary.chromaticAbberationShift(
+                                ShaderLibrary.chromatic_abberation_shift(
                                     .float(startDate.timeIntervalSinceNow)
                                 ),
                                 maxSampleOffset: .zero
@@ -54,32 +47,31 @@ struct ChromaticAbberation: View {
                             .animation(.linear(duration: 1), value: startDate)
                     }
 
-                    Picker("Version", selection: $state) {
+                    Picker("Type", selection: $state) {
                         Text("Static").tag(Float(0))
                         Text("Shifty").tag(Float(1))
                     }
-                    .pickerStyle(.menu)
                 }
 
                 if state == 0 {
                     ShowcaseParameter(
                         value: $red,
                         name: Binding.constant("Red"),
-                        
+
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
                         value: $green,
                         name: Binding.constant("Green"),
-                        
+
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
                         value: $blue,
                         name: Binding.constant("Blue"),
-                        
+
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
@@ -87,7 +79,7 @@ struct ChromaticAbberation: View {
                     ShowcaseParameter(
                         value: $time,
                         name: Binding.constant("Time"),
-                        
+
                         editatble: Binding.constant(false),
                         range: Binding.constant(0 ... 10)
                     )

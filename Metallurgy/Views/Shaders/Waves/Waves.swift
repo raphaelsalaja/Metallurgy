@@ -101,7 +101,6 @@ struct Waves: View {
                     ShowcaseParameter(
                         value: $frequency,
                         name: Binding.constant("Frequency"),
-                        
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
