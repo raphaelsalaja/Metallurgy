@@ -13,7 +13,7 @@ struct ShowcaseImage: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(maxWidth: .infinity)
-            .frame(height: 200)
+            .listRowInsets(EdgeInsets())
     }
 }
 

@@ -48,25 +48,6 @@ struct StaticNoise: View {
                         .animation(.linear(duration: 1), value: strength)
                         .animation(.linear(duration: 1), value: size)
                 }
-
-                ShowcaseParameter(
-                    value: $dummy1,
-                    name: Binding.constant("Static Noise"),
-                    editatble: Binding.constant(true),
-                    range: Binding.constant(0 ... 10)
-                )
-                ShowcaseParameter(
-                    value: $dummy2,
-                    name: Binding.constant("Exposure"),
-                    editatble: Binding.constant(true),
-                    range: Binding.constant(0 ... 10)
-                )
-                ShowcaseParameter(
-                    value: $dummy3,
-                    name: Binding.constant("Pixel Size"),
-                    editatble: Binding.constant(true),
-                    range: Binding.constant(0 ... 10)
-                )
             }
         }
     }

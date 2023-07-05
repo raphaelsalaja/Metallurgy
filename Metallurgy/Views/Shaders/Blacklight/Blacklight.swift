@@ -5,7 +5,7 @@ struct Blacklight: View {
     @Binding var author: String
     @Binding var category: Categories
 
-    @State var strength: Float = 0.0
+    @State var strength: Float = 1.0
 
     var body: some View {
         TimelineView(.animation) { _ in
@@ -32,7 +32,7 @@ struct Blacklight: View {
                     name: Binding.constant("Strength"),
                     
                     editatble: Binding.constant(true),
-                    range: Binding.constant(0 ... 10)
+                    range: Binding.constant(1 ... 10)
                 )
             }
         }

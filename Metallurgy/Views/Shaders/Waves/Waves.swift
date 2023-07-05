@@ -115,5 +115,5 @@ struct Waves: View {
         name: .constant("Waves"),
         author: .constant("Paul Hudson, Raphael Salaja"),
         category: .constant(Categories.Distortion)
-    ).preferredColorScheme(.dark)
+    )
 }

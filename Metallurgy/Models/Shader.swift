@@ -208,14 +208,6 @@ final class ShaderShowcases {
             ))
         ),
         MetalShader(
-            name: "Loupe",
-            showcase: AnyView(Loupe(
-                name: .constant("Loupe"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
             name: "Posterize",
             showcase: AnyView(Posterize(
                 name: .constant("Posterize"),

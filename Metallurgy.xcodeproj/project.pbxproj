@@ -22,7 +22,6 @@
 		F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E6672A4B71E3006E7CF1 /* Waves.swift */; };
 		F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6692A4B71FD006E7CF1 /* Waves.metal */; };
 		F260EACB2A4CEB8800EA5E0F /* VHS.metal in Sources */ = {isa = PBXBuildFile; fileRef = F260EACA2A4CEB8800EA5E0F /* VHS.metal */; };
-		F260EACD2A4CEC2600EA5E0F /* Loupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F260EACC2A4CEC2600EA5E0F /* Loupe.swift */; };
 		F272720A2A54BAE7007E9FC5 /* VHS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27272092A54BAE7007E9FC5 /* VHS.swift */; };
 		F272720C2A54C1C6007E9FC5 /* RandomColors.metal in Sources */ = {isa = PBXBuildFile; fileRef = F272720B2A54C1C6007E9FC5 /* RandomColors.metal */; };
 		F272720E2A54CABD007E9FC5 /* RandomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272720D2A54CABD007E9FC5 /* RandomColors.swift */; };
@@ -46,7 +45,6 @@
 		F2DB79532A4F9AC000C2F727 /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79522A4F9AC000C2F727 /* Posterize.metal */; };
 		F2DB79552A4F9ACD00C2F727 /* Infrared.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79542A4F9ACD00C2F727 /* Infrared.metal */; };
 		F2DB79572A4F9ADA00C2F727 /* Halftone.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79562A4F9ADA00C2F727 /* Halftone.metal */; };
-		F2F56F4A2A5010E300849DBE /* Loupe.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2F56F492A5010E300849DBE /* Loupe.metal */; };
 		F2F56F4D2A502B5000849DBE /* Wave in Frameworks */ = {isa = PBXBuildFile; productRef = F2F56F4C2A502B5000849DBE /* Wave */; };
 		F2F56F4F2A5037C500849DBE /* Blacklight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F56F4E2A5037C500849DBE /* Blacklight.swift */; };
 		F2F56F512A5037C900849DBE /* Bloom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F56F502A5037C900849DBE /* Bloom.swift */; };
@@ -83,7 +81,6 @@
 		F259E6672A4B71E3006E7CF1 /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
 		F259E6692A4B71FD006E7CF1 /* Waves.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Waves.metal; sourceTree = "<group>"; };
 		F260EACA2A4CEB8800EA5E0F /* VHS.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VHS.metal; sourceTree = "<group>"; };
-		F260EACC2A4CEC2600EA5E0F /* Loupe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loupe.swift; sourceTree = "<group>"; };
 		F27272092A54BAE7007E9FC5 /* VHS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHS.swift; sourceTree = "<group>"; };
 		F272720B2A54C1C6007E9FC5 /* RandomColors.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RandomColors.metal; sourceTree = "<group>"; };
 		F272720D2A54CABD007E9FC5 /* RandomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColors.swift; sourceTree = "<group>"; };
@@ -105,7 +102,6 @@
 		F2DB79522A4F9AC000C2F727 /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Posterize.metal; sourceTree = "<group>"; };
 		F2DB79542A4F9ACD00C2F727 /* Infrared.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Infrared.metal; sourceTree = "<group>"; };
 		F2DB79562A4F9ADA00C2F727 /* Halftone.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Halftone.metal; sourceTree = "<group>"; };
-		F2F56F492A5010E300849DBE /* Loupe.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Loupe.metal; sourceTree = "<group>"; };
 		F2F56F4E2A5037C500849DBE /* Blacklight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blacklight.swift; sourceTree = "<group>"; };
 		F2F56F502A5037C900849DBE /* Bloom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bloom.swift; sourceTree = "<group>"; };
 		F2F56F522A5037D400849DBE /* ColorChannelMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChannelMixer.swift; sourceTree = "<group>"; };
@@ -178,7 +174,6 @@
 				F23754362A518AA2003B2BEB /* Infrared */,
 				F23754372A518AAB003B2BEB /* Intensity */,
 				F23754382A518AB0003B2BEB /* Invert */,
-				F23754392A518ACA003B2BEB /* Loupe Magnification */,
 				F237543A2A518ADA003B2BEB /* Posterize */,
 				F27272082A54BAD4007E9FC5 /* Static Noise */,
 				F237543B2A518AE4003B2BEB /* VHS */,
@@ -322,15 +317,6 @@
 				F2F56F682A50382E00849DBE /* Invert.swift */,
 			);
 			path = Invert;
-			sourceTree = "<group>";
-		};
-		F23754392A518ACA003B2BEB /* Loupe Magnification */ = {
-			isa = PBXGroup;
-			children = (
-				F2F56F492A5010E300849DBE /* Loupe.metal */,
-				F260EACC2A4CEC2600EA5E0F /* Loupe.swift */,
-			);
-			path = "Loupe Magnification";
 			sourceTree = "<group>";
 		};
 		F237543A2A518ADA003B2BEB /* Posterize */ = {
@@ -514,9 +500,7 @@
 				F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */,
 				F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */,
 				F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */,
-				F2F56F4A2A5010E300849DBE /* Loupe.metal in Sources */,
 				F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */,
-				F260EACD2A4CEC2600EA5E0F /* Loupe.swift in Sources */,
 				F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */,
 				F2F56F4F2A5037C500849DBE /* Blacklight.swift in Sources */,
 				F2F56F532A5037D400849DBE /* ColorChannelMixer.swift in Sources */,

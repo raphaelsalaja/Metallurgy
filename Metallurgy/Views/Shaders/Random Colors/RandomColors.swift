@@ -22,6 +22,7 @@ struct RandomColors: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(maxWidth: .infinity)
+                        .listRowInsets(EdgeInsets())
                         .layerEffect(
                             ShaderLibrary.random(
                                 .float(amount),
@@ -31,7 +32,7 @@ struct RandomColors: View {
                         )
                         .animation(.linear(duration: 1), value: amount)
                         .animation(.linear(duration: 1), value: strength)
-                        .listRowInsets(EdgeInsets())
+                        
                 }
 
                 ShowcaseParameter(
