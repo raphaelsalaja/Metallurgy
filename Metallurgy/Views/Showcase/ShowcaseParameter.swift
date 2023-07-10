@@ -31,6 +31,7 @@ struct ShowcaseParameter: View {
                 }
                 if editatble {
                     Slider(value: $value, in: range, step: 0.01)
+                        .animation(.linear(duration: 3), value: value)
                 }
             }
         }

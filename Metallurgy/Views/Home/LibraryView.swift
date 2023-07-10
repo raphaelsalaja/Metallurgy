@@ -1,31 +1,34 @@
-//
-//  LibraryView.swift
-//  MetalShaderShowcases
-//
-//  Created by Raphael S on 27/06/2023.
-//
-
 import SwiftUI
 
 struct LibraryView: View {
-    @State var shaders = ShaderShowcases().shaders
+    @State var shaders: [MetalShader] = ShaderShowcases().shaders
+    @State private var search = ""
+
+    var shadersToShow: [MetalShader] {
+        if search.isEmpty {
+            return shaders.sorted(by: { $0.name < $1.name })
+        } else {
+            return shaders.filter { $0.name.contains(search) }
+        }
+    }
 
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    ForEach(shaders) { shader in
+                    ForEach(shadersToShow) { shader in
                         NavigationLink(destination: shader.showcase) {
                             Text(shader.name)
                         }
                     }
                 }
             }
-            .searchable(text: .constant(""),
+            .navigationTitle("Library")
+            .navigationBarTitleDisplayMode(.inline)
+            
+            .searchable(text: $search,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "Search")
-            .navigationTitle("Library")
-            .navigationBarTitleDisplayMode(.automatic)
         }
     }
 }

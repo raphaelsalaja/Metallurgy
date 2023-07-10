@@ -1,6 +1,33 @@
 {
   "pins" : [
     {
+      "identity" : "coregeometry",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.com/Pyroh/CoreGeometry.git",
+      "state" : {
+        "revision" : "c8604b90dc60084e9d08f289573e537585b84129",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "slidingruler",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Pyroh/SlidingRuler",
+      "state" : {
+        "revision" : "707b15e0ade64b488e7146a487cc5ee9570af9fa",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "smoothoperators",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Pyroh/SmoothOperators.git",
+      "state" : {
+        "revision" : "dd013309755d75d8636fd7fb89bb25da34b92c7e",
+        "version" : "0.20.0"
+      }
+    },
+    {
       "identity" : "wave",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jtrivedi/Wave",
