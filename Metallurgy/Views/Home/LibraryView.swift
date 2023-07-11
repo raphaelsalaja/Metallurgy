@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @State var shaders: [MetalShader] = ShaderShowcases().shaders
+
     @State private var search = ""
 
     var shadersToShow: [MetalShader] {
@@ -16,11 +17,13 @@ struct LibraryView: View {
         NavigationView {
             List {
                 Section {
-//                    ForEach(shadersToShow) { shader in
-//                        NavigationLink(destination: shader.showcase) {
-//                            Text(shader.name)
-//                        }
-//                    }
+                    ForEach(shadersToShow) { shader in
+                        NavigationLink {
+                            ShowcaseModelView(metalshader: shader)
+                        } label: {
+                            Text(shader.name)
+                        }
+                    }
                 }
             }
             .navigationTitle("Library")

@@ -81,12 +81,19 @@ enum SortingOptions: String, CaseIterable, Identifiable {
     }
 }
 
-struct Argument: Identifiable {
+class Argument: Identifiable, ObservableObject {
     var id = UUID()
     let name: String
-    var value: Float
+    @Published var value: Float
     let range: ClosedRange<Float>
     let editable: Bool
+
+    init() {
+        self.name = ""
+        self.value = 0
+        self.range = 0 ... 0
+        self.editable = false
+    }
 
     init(name: String, range: ClosedRange<Float>) {
         self.name = name
@@ -96,15 +103,23 @@ struct Argument: Identifiable {
     }
 }
 
-@Observable
-struct MetalShader: Identifiable {
+class MetalShader: Identifiable, ObservableObject {
     var id = UUID()
     let name: String
     let author: String
     let isTimeBased: Bool
     let function: String
     let category: Categories
-    var arguments: [Argument] = []
+    @Published var arguments: [Argument]
+
+    init() {
+        self.name = ""
+        self.author = ""
+        self.isTimeBased = false
+        self.function = ""
+        self.category = .Color
+        self.arguments = []
+    }
 
     init(name: String, author: String, function: String, category: Categories, arguments: [Argument]) {
         self.name = name

@@ -12,11 +12,17 @@ extension Image {
 }
 
 struct ShowcaseModelView: View {
-    @State var metalshader: MetalShader
+    // MARK: - Model
+
+    @StateObject var metalshader = MetalShader()
+
+    // MARK: - Shader
 
     @State var arguments: [Shader.Argument] = []
     @State var shader: Shader = .init(function: .init(library: .default, name: ""), arguments: [])
     @State var function: ShaderFunction = .init(library: .default, name: "")
+
+    // MARK: - Photos Picker
 
     @State var photosPickerImage: Image?
     @State var showingPhotosPicker = false
@@ -38,10 +44,18 @@ struct ShowcaseModelView: View {
         self.shader = Shader(function: self.function, arguments: self.arguments)
     }
 
-    // update shader should take in the arguments and update the shader
+    // MARK: - Update Shader
 
-    func UpdateShader(arguments: [Shader.Argument]) {
-        for
+    // Takes in new arguments and updates the shader
+    func UpdateShader() {
+        self.arguments = []
+        for argument in self.metalshader.arguments {
+            self.arguments.append(
+                Shader.Argument.float(argument.value)
+            )
+        }
+
+        self.shader = Shader(function: self.function, arguments: self.arguments)
     }
 
     var body: some View {
@@ -51,7 +65,9 @@ struct ShowcaseModelView: View {
                     ZStack(alignment: .topTrailing) {
                         if let photosPickerImage {
                             photosPickerImage
-                                .ShowcaseImageSetup()
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: .infinity)
                                 .layerEffect(
                                     self.shader,
                                     maxSampleOffset: .zero
@@ -60,7 +76,9 @@ struct ShowcaseModelView: View {
 
                         if photosPickerImage == nil {
                             Image(.car)
-                                .ShowcaseImageSetup()
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(maxWidth: .infinity)
                                 .layerEffect(
                                     self.shader,
                                     maxSampleOffset: .zero
@@ -98,18 +116,33 @@ struct ShowcaseModelView: View {
                         }
                     }
                 }
-
                 ControlGroup {
-                    ForEach(self.metalshader.arguments) { argument in
-                        ShowcaseParameter(
-                            value: argument.value,
-                            name: Binding.constant(argument.name),
-                            editatble: Binding.constant(argument.editable),
-                            range: Binding.constant(argument.range)
-                        )
-                        .onChange(of: argument.value) {}
+                    ForEach(Array(self.metalshader.arguments.enumerated()), id: \.1.id) { id, argument in
+                        VStack {
+                            HStack {
+                                Text(argument.name)
+                                    .fontWeight(.regular)
+                                    .foregroundStyle(.secondary)
 
-                    }.listRowSeparator(.hidden)
+                                Spacer()
+
+                                Text("\(argument.value, format: .number.precision(.fractionLength(2)))")
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.primary)
+                                    .animation(.default, value: argument.value)
+                            }
+
+                            Slider(
+                                value: self.$metalshader.arguments[id].value,
+                                in: argument.range,
+                                step: 0.01
+                            )
+                            .animation(.linear(duration: 3), value: argument.value)
+                            .onChange(of: argument.value) {
+                                self.UpdateShader()
+                            }
+                        }
+                    }
                 }
                 .navigationTitle("Random Colors")
                 .navigationBarTitleDisplayMode(.inline)
