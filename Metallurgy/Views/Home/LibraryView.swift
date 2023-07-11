@@ -16,16 +16,16 @@ struct LibraryView: View {
         NavigationView {
             List {
                 Section {
-                    ForEach(shadersToShow) { shader in
-                        NavigationLink(destination: shader.showcase) {
-                            Text(shader.name)
-                        }
-                    }
+//                    ForEach(shadersToShow) { shader in
+//                        NavigationLink(destination: shader.showcase) {
+//                            Text(shader.name)
+//                        }
+//                    }
                 }
             }
             .navigationTitle("Library")
             .navigationBarTitleDisplayMode(.inline)
-            
+
             .searchable(text: $search,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "Search")

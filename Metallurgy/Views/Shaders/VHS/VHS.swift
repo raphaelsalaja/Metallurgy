@@ -42,31 +42,31 @@ struct CanonEvent: View {
                 }
 
                 ShowcaseParameter(
-                    value: $noiseQuality,
+                    value: noiseQuality,
                     name: Binding.constant("Noise Quality"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 1000)
                 )
                 ShowcaseParameter(
-                    value: $noiseIntensity,
+                    value: noiseIntensity,
                     name: Binding.constant("Noise Intensity"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 20)
                 )
                 ShowcaseParameter(
-                    value: $offsetIntensity,
+                    value: offsetIntensity,
                     name: Binding.constant("Offset Intensity"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 100)
                 )
                 ShowcaseParameter(
-                    value: $colorOffsetIntensity,
+                    value: colorOffsetIntensity,
                     name: Binding.constant("Color Offset Intensity"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 100)
                 )
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Strength"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 10)

@@ -55,21 +55,21 @@ struct ChromaticAbberation: View {
 
                 if state == 0 {
                     ShowcaseParameter(
-                        value: $red,
+                        value: red,
                         name: Binding.constant("Red"),
 
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $green,
+                        value: green,
                         name: Binding.constant("Green"),
 
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $blue,
+                        value: blue,
                         name: Binding.constant("Blue"),
 
                         editatble: Binding.constant(true),
@@ -77,7 +77,7 @@ struct ChromaticAbberation: View {
                     )
                 } else {
                     ShowcaseParameter(
-                        value: $time,
+                        value: time,
                         name: Binding.constant("Time"),
 
                         editatble: Binding.constant(false),

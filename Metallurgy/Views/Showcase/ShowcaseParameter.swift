@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShowcaseParameter: View {
-    @Binding var value: Float
+    @State var value: Float
     @Binding var name: String
     @Binding var editatble: Bool
     @Binding var range: ClosedRange<Float>
@@ -40,7 +40,7 @@ struct ShowcaseParameter: View {
 
 #Preview {
     ShowcaseParameter(
-        value: .constant(0.5),
+        value: 0.5,
         name: .constant("Name"),
         editatble: .constant(true),
         range: .constant(0.1 ... 10)

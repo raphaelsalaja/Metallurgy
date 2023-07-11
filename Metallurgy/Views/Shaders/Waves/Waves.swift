@@ -63,7 +63,7 @@ struct Waves: View {
                 switch state {
                 case .Simple:
                     ShowcaseParameter(
-                        value: Binding.constant(0.5),
+                        value: 0.5,
                         name: Binding.constant("Time"),
                         
                         editatble: Binding.constant(false),
@@ -71,35 +71,35 @@ struct Waves: View {
                     )
                 case .Complex:
                     ShowcaseParameter(
-                        value: Binding.constant(0.5),
+                        value: 0.5,
                         name: Binding.constant("Time"),
                         
                         editatble: Binding.constant(false),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $size,
+                        value: size,
                         name: Binding.constant("Size"),
                         
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $speed,
+                        value: speed,
                         name: Binding.constant("Speed"),
                         
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $strength,
+                        value: strength,
                         name: Binding.constant("Strength"),
                         
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)
                     )
                     ShowcaseParameter(
-                        value: $frequency,
+                        value: frequency,
                         name: Binding.constant("Frequency"),
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 10)

@@ -27,7 +27,7 @@ struct Greyscale: View {
                 }
 
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Strength"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(0 ... 10)

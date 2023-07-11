@@ -29,7 +29,7 @@ struct Invert: View {
                 }
 
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Strength"),
                     
                     editatble: Binding.constant(true),

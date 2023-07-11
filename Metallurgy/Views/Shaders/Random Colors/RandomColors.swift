@@ -91,13 +91,13 @@ struct RandomColors: View {
                     
                 ControlGroup {
                     ShowcaseParameter(
-                        value: $amount,
+                        value: amount,
                         name: Binding.constant("Colors Amount"),
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 100)
                     )
                     ShowcaseParameter(
-                        value: $strength,
+                        value: strength,
                         name: Binding.constant("Strength"),
                         editatble: Binding.constant(true),
                         range: Binding.constant(0 ... 1)

@@ -28,7 +28,7 @@ struct Contrast: View {
                 }
 
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Contrast"),
                     
                     editatble: Binding.constant(true),

@@ -34,25 +34,25 @@ struct ColorChannelMixer: View {
                 }
 
                 ShowcaseParameter(
-                    value: $red,
+                    value: red,
                     name: Binding.constant("Red"),
-                    
+
                     editatble: Binding.constant(true),
                     range: Binding.constant(1 ... 10)
                 )
 
                 ShowcaseParameter(
-                    value: $green,
+                    value: green,
                     name: Binding.constant("Green"),
-                    
+
                     editatble: Binding.constant(true),
                     range: Binding.constant(1 ... 10)
                 )
 
                 ShowcaseParameter(
-                    value: $blue,
+                    value: blue,
                     name: Binding.constant("Blue"),
-                    
+
                     editatble: Binding.constant(true),
                     range: Binding.constant(1 ... 10)
                 )

@@ -81,15 +81,38 @@ enum SortingOptions: String, CaseIterable, Identifiable {
     }
 }
 
+struct Argument: Identifiable {
+    var id = UUID()
+    let name: String
+    var value: Float
+    let range: ClosedRange<Float>
+    let editable: Bool
+
+    init(name: String, range: ClosedRange<Float>) {
+        self.name = name
+        self.value = (range.lowerBound + range.upperBound) / 2
+        self.range = range
+        self.editable = true
+    }
+}
+
 @Observable
 struct MetalShader: Identifiable {
     var id = UUID()
     let name: String
-    let showcase: AnyView
+    let author: String
+    let isTimeBased: Bool
+    let function: String
+    let category: Categories
+    var arguments: [Argument] = []
 
-    public init(name: String, showcase: AnyView) {
+    init(name: String, author: String, function: String, category: Categories, arguments: [Argument]) {
         self.name = name
-        self.showcase = showcase
+        self.author = author
+        self.isTimeBased = false
+        self.function = function
+        self.category = category
+        self.arguments = arguments
     }
 }
 
@@ -97,147 +120,10 @@ final class ShaderShowcases {
     var shaders: [MetalShader] = [
         MetalShader(
             name: "Blacklight",
-            showcase: AnyView(Blacklight(
-                name: .constant("Blacklight"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
+            author: "Raphael Salaja",
+            function: "blacklight",
+            category: .Layer,
+            arguments: [Argument(name: "Strength", range: 0 ... 10)]
         ),
-        MetalShader(
-            name: "Bloom",
-            showcase: AnyView(Bloom(
-                name: .constant("Bloom"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Chromatic Aberration",
-            showcase: AnyView(ChromaticAbberation(
-                name: .constant("Chromatic Aberration"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Color Channel Mixer",
-            showcase: AnyView(ColorChannelMixer(
-                name: .constant("Color Channel Mixer"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Contrast",
-            showcase: AnyView(Contrast(
-                name: .constant("Contrast"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Deepfry",
-            showcase: AnyView(Deepfry(
-                name: .constant("Deepfry"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Distortion Waves",
-            showcase: AnyView(Waves(
-                name: .constant("Distortion"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Dithering",
-            showcase: AnyView(Dithering(
-                name: .constant("Dithering"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Edge Detection",
-            showcase: AnyView(EdgeDetection(
-                name: .constant("Edge Detection"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Greyscale",
-            showcase: AnyView(Greyscale(
-                name: .constant("Greyscale"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Halftone",
-            showcase: AnyView(Halftone(
-                name: .constant("Halftone"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Infrared",
-            showcase: AnyView(Infrared(
-                name: .constant("Infrared"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Intensity",
-            showcase: AnyView(Intensity(
-                name: .constant("Intensity"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Invert",
-            showcase: AnyView(Invert(
-                name: .constant("Invert"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Posterize",
-            showcase: AnyView(Posterize(
-                name: .constant("Posterize"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Sepia",
-            showcase: AnyView(Sepia(
-                name: .constant("Sepia"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Static Noise",
-            showcase: AnyView(StaticNoise(
-                name: .constant("Static Noise"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        ),
-        MetalShader(
-            name: "Random Colors",
-            showcase: AnyView(RandomColors(
-                name: .constant("Random Colors"),
-                author: .constant("Raphael Salaja"),
-                category: .constant(Categories.Layer)
-            ))
-        )
     ]
 }

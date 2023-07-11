@@ -28,7 +28,7 @@ struct Deepfry: View {
                 }
 
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Deepfry"),
                     
                     editatble: Binding.constant(true),

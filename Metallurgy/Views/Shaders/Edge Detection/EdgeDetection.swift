@@ -29,7 +29,7 @@ struct EdgeDetection: View {
                 }
 
                 ShowcaseParameter(
-                    value: Binding.constant(0.5),
+                    value: 0.5,
                     name: Binding.constant("Time"),
                     
                     editatble: Binding.constant(false),

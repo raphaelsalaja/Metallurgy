@@ -31,14 +31,14 @@ struct Dithering: View {
                 }
 
                 ShowcaseParameter(
-                    value: $strength,
+                    value: strength,
                     name: Binding.constant("Strength"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(-10 ... 10)
                 )
 
                 ShowcaseParameter(
-                    value: $size,
+                    value: size,
                     name: Binding.constant("Pixel Size"),
                     editatble: Binding.constant(true),
                     range: Binding.constant(1 ... 5)
