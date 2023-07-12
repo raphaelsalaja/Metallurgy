@@ -8,13 +8,46 @@
 import SwiftUI
 
 struct ShowcaseLink: View {
+    @State var showcase: Showcase
+
+    func GetIcon() -> Image {
+        switch showcase.category {
+        case .Distortion:
+            return Image(systemName: "scale.3d")
+        case .Layer:
+            return Image(systemName: "square.fill.on.square.fill")
+        case .Color:
+            return Image(systemName: "swatchpalette.fill")
+        }
+    }
+
+    func color() -> Color {
+        switch showcase.category {
+        case .Distortion:
+            return .blue
+        case .Layer:
+            return .green
+        case .Color:
+            return .purple
+        }
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        Text("Hello, World!")
-    
+        NavigationLink(destination: ShowcaseModelView(showcase: showcase)) {
+            HStack(spacing: 12) {
+                GetIcon()
+                    .foregroundColor(.white)
+                    .font(.footnote)
+                    .frame(width: 28, height: 28)
+                    .background(color())
+                    .cornerRadius(6)
+
+                Text(showcase.name)
+            }
+        }
     }
 }
 
 #Preview {
-    ShowcaseLink()
+    ShowcaseLink(showcase: ShaderShowcases().shaders[0])
 }

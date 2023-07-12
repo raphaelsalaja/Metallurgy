@@ -35,7 +35,7 @@ struct LayerEffectModifier: ViewModifier {
 }
 
 struct DistortionEffectModifier: ViewModifier {
-    @State var shader: MetalShader
+    @State var shader: Showcase
     @State var time = Date()
 
     func CreateArguments(time: Shader.Argument, size: Shader.Argument) -> [Shader.Argument] {
@@ -71,7 +71,7 @@ struct DistortionEffectModifier: ViewModifier {
 }
 
 struct ShowcaseModelView: View {
-    @StateObject var metalshader = MetalShader()
+    @StateObject var showcase = Showcase()
 
     @State var arguments: [Shader.Argument] = []
     @State var shader: Shader = .init(function: .init(library: .default, name: ""), arguments: [])
@@ -85,10 +85,10 @@ struct ShowcaseModelView: View {
     func SetShader() {
         self.function = ShaderFunction(
             library: .default,
-            name: self.metalshader.function
+            name: self.showcase.function
         )
 
-        for argument in self.metalshader.arguments {
+        for argument in self.showcase.arguments {
             self.arguments.append(
                 Shader.Argument.float(argument.value)
             )
@@ -99,7 +99,7 @@ struct ShowcaseModelView: View {
 
     func UpdateShader() {
         self.arguments = []
-        for argument in self.metalshader.arguments {
+        for argument in self.showcase.arguments {
             self.arguments.append(
                 Shader.Argument.float(argument.value)
             )
@@ -114,7 +114,7 @@ struct ShowcaseModelView: View {
                 Section {
                     ZStack(alignment: .topTrailing) {
                         if let photosPickerImage {
-                            switch self.metalshader.category {
+                            switch self.showcase.category {
                             case .Color:
                                 photosPickerImage
                                     .ShowcaseImageSetup()
@@ -126,12 +126,12 @@ struct ShowcaseModelView: View {
                             case .Distortion:
                                 photosPickerImage
                                     .ShowcaseImageSetup()
-                                    .modifier(DistortionEffectModifier(shader: self.metalshader))
+                                    .modifier(DistortionEffectModifier(shader: self.showcase))
                             }
                         }
 
                         if photosPickerImage == nil {
-                            switch self.metalshader.category {
+                            switch self.showcase.category {
                             case .Color:
                                 Image(.car)
                                     .ShowcaseImageSetup()
@@ -143,11 +143,11 @@ struct ShowcaseModelView: View {
                             case .Distortion:
                                 Image(.car)
                                     .ShowcaseImageSetup()
-                                    .modifier(DistortionEffectModifier(shader: self.metalshader))
+                                    .modifier(DistortionEffectModifier(shader: self.showcase))
                             }
                         }
                         VStack {
-                            CategoryButton(category: self.metalshader.category)
+                            CategoryButton(category: self.showcase.category)
                         }.padding()
                     }
                     .listRowInsets(EdgeInsets())
@@ -178,7 +178,7 @@ struct ShowcaseModelView: View {
                     }
                 }
                 ControlGroup {
-                    ForEach(Array(self.metalshader.arguments.enumerated()), id: \.1.id) { id, argument in
+                    ForEach(Array(self.showcase.arguments.enumerated()), id: \.1.id) { id, argument in
                         VStack {
                             HStack {
                                 Text(argument.name)
@@ -194,7 +194,7 @@ struct ShowcaseModelView: View {
                             }
 
                             Slider(
-                                value: self.$metalshader.arguments[id].value,
+                                value: self.$showcase.arguments[id].value,
                                 in: argument.range,
                                 step: 0.01
                             )
@@ -205,24 +205,21 @@ struct ShowcaseModelView: View {
                         }
                     }
                 }
-                .navigationTitle(self.metalshader.name)
-                .navigationBarTitleDisplayMode(.inline)
             }
+            .navigationTitle(self.showcase.name)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 #Preview {
     ShowcaseModelView(
-        metalshader: MetalShader(
+        showcase: Showcase(
             name: "Blacklight",
-            author: "Raphael Salaja",
             function: "blacklight",
-            category: .Layer,
-            arguments: [Argument(
-                name: "Strength",
-                range: 0 ... 10
-            )]
+            arguments: [
+                Argument(name: "Strength", range: 0 ... 10),
+            ]
         )
     )
 }

@@ -1,6 +1,6 @@
 //
 //  Intensity.swift
-//  MetalShaderShowcases
+//  ShowcaseShowcases
 //
 //  Created by Raphael S on 01/07/2023.
 //

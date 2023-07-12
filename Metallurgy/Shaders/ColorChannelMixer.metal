@@ -3,7 +3,7 @@
 
 using namespace metal;
 
-[[ stitchable ]] half4 multiply_color_channel(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
+[[ stitchable ]] half4 color_channel_mixer(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
     half4 original_color = layer.sample(position);
     half4 new_color = original_color;
     

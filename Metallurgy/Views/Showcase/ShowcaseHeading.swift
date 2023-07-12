@@ -1,6 +1,6 @@
 //
 //  ShaderDemonstration.swift
-//  MetalShaderShowcases
+//  ShowcaseShowcases
 //
 //  Created by Raphael S on 25/06/2023.
 //

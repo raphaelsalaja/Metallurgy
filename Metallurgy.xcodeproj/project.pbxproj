@@ -11,7 +11,6 @@
 		F225252A2A48896F005352D4 /* ParameterButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22525292A48896F005352D4 /* ParameterButtton.swift */; };
 		F226E17F2A5D557F000DEF09 /* ShowcaseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226E17E2A5D557F000DEF09 /* ShowcaseModelView.swift */; };
 		F22CA78D2A5714B600EE2EB2 /* ShowcaseLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22CA78C2A5714B600EE2EB2 /* ShowcaseLink.swift */; };
-		F22CA7902A57154900EE2EB2 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22CA78F2A57154900EE2EB2 /* LibraryView.swift */; };
 		F22CA7922A5772F300EE2EB2 /* RandomColorsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */; };
 		F23166AE2A5382DA00C3078B /* StaticNoise.metal in Sources */ = {isa = PBXBuildFile; fileRef = F23166AD2A5382DA00C3078B /* StaticNoise.metal */; };
 		F23166B02A53877F00C3078B /* Exposure.metal in Sources */ = {isa = PBXBuildFile; fileRef = F23166AF2A53877E00C3078B /* Exposure.metal */; };
@@ -29,7 +28,7 @@
 		F272720E2A54CABD007E9FC5 /* RandomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272720D2A54CABD007E9FC5 /* RandomColors.swift */; };
 		F2918BB72A5C5FFE00CF328B /* ShowcaseContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2918BB62A5C5FFE00CF328B /* ShowcaseContextMenu.swift */; };
 		F29917762A4308B0005DBC70 /* Sepia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BCB1102A4258A10010EBF7 /* Sepia.swift */; };
-		F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */; };
+		F29917812A4308B0005DBC70 /* Metallurgy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA98264EE37A00B057E5 /* Metallurgy.swift */; };
 		F29917822A4308B0005DBC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA9A264EE37A00B057E5 /* ContentView.swift */; };
 		F29FC8742A5C18FA0058D3F0 /* SlidingRuler in Frameworks */ = {isa = PBXBuildFile; productRef = F29FC8732A5C18FA0058D3F0 /* SlidingRuler */; };
 		F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */ = {isa = PBXBuildFile; fileRef = F29FE64F2A45942F00EAAC87 /* Sepia.metal */; };
@@ -44,7 +43,7 @@
 		F2DB79412A4F98E300C2F727 /* Greyscale.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79402A4F98E300C2F727 /* Greyscale.metal */; };
 		F2DB79432A4F99B300C2F727 /* Blacklight.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79422A4F99B300C2F727 /* Blacklight.metal */; };
 		F2DB79472A4F99F500C2F727 /* Deepfry.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79462A4F99F500C2F727 /* Deepfry.metal */; };
-		F2DB79492A4F9A7100C2F727 /* ColorChannel.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */; };
+		F2DB79492A4F9A7100C2F727 /* ColorChannelMixer.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79482A4F9A7100C2F727 /* ColorChannelMixer.metal */; };
 		F2DB794D2A4F9A8D00C2F727 /* Dithering.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */; };
 		F2DB794F2A4F9AAB00C2F727 /* Bloom.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */; };
 		F2DB79532A4F9AC000C2F727 /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2DB79522A4F9AC000C2F727 /* Posterize.metal */; };
@@ -68,13 +67,12 @@
 
 /* Begin PBXFileReference section */
 		518EAA95264EE37A00B057E5 /* Metallurgy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metallurgy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalShaderShowcases.swift; sourceTree = "<group>"; };
+		518EAA98264EE37A00B057E5 /* Metallurgy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metallurgy.swift; sourceTree = "<group>"; };
 		518EAA9A264EE37A00B057E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F22525272A486E14005352D4 /* ShowcaseHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseHeading.swift; sourceTree = "<group>"; };
 		F22525292A48896F005352D4 /* ParameterButtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterButtton.swift; sourceTree = "<group>"; };
 		F226E17E2A5D557F000DEF09 /* ShowcaseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseModelView.swift; sourceTree = "<group>"; };
 		F22CA78C2A5714B600EE2EB2 /* ShowcaseLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseLink.swift; sourceTree = "<group>"; };
-		F22CA78F2A57154900EE2EB2 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColorsNew.swift; sourceTree = "<group>"; };
 		F23166AD2A5382DA00C3078B /* StaticNoise.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = StaticNoise.metal; sourceTree = "<group>"; };
 		F23166AF2A53877E00C3078B /* Exposure.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Exposure.metal; sourceTree = "<group>"; };
@@ -105,7 +103,7 @@
 		F2DB79402A4F98E300C2F727 /* Greyscale.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Greyscale.metal; sourceTree = "<group>"; };
 		F2DB79422A4F99B300C2F727 /* Blacklight.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Blacklight.metal; sourceTree = "<group>"; };
 		F2DB79462A4F99F500C2F727 /* Deepfry.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Deepfry.metal; sourceTree = "<group>"; };
-		F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorChannel.metal; sourceTree = "<group>"; };
+		F2DB79482A4F9A7100C2F727 /* ColorChannelMixer.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorChannelMixer.metal; sourceTree = "<group>"; };
 		F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Dithering.metal; sourceTree = "<group>"; };
 		F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Bloom.metal; sourceTree = "<group>"; };
 		F2DB79522A4F9AC000C2F727 /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Posterize.metal; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			children = (
 				F23754462A518DA9003B2BEB /* Info.plist */,
 				F23754442A518D80003B2BEB /* Media.xcassets */,
-				518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */,
 				F29FE6552A45B93400EAAC87 /* Models */,
 				F2A0C2272A5EACBE000F099B /* Shaders */,
 				F2BCB1122A42FE410010EBF7 /* Views */,
@@ -171,12 +168,6 @@
 		F21878772A41DC3600640BAA /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F2F56F6C2A50387E00849DBE /* Posterize.swift */,
-				F272720D2A54CABD007E9FC5 /* RandomColors.swift */,
-				F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */,
-				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
-				F2F56F742A5038E500849DBE /* StaticNoise.swift */,
-				F27272092A54BAE7007E9FC5 /* VHS.swift */,
 				F2F56F4E2A5037C500849DBE /* Blacklight.swift */,
 				F2F56F502A5037C900849DBE /* Bloom.swift */,
 				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
@@ -190,6 +181,12 @@
 				F2F56F642A50380E00849DBE /* Infrared.swift */,
 				F2F56F662A50382A00849DBE /* Intensity.swift */,
 				F2F56F682A50382E00849DBE /* Invert.swift */,
+				F2F56F6C2A50387E00849DBE /* Posterize.swift */,
+				F272720D2A54CABD007E9FC5 /* RandomColors.swift */,
+				F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */,
+				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
+				F2F56F742A5038E500849DBE /* StaticNoise.swift */,
+				F27272092A54BAE7007E9FC5 /* VHS.swift */,
 				F259E6672A4B71E3006E7CF1 /* Waves.swift */,
 			);
 			path = Shaders;
@@ -207,8 +204,8 @@
 		F24E928C2A4B87B400176603 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				518EAA98264EE37A00B057E5 /* Metallurgy.swift */,
 				518EAA9A264EE37A00B057E5 /* ContentView.swift */,
-				F22CA78F2A57154900EE2EB2 /* LibraryView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -216,14 +213,12 @@
 		F29FE64E2A45940F00EAAC87 /* Showcase */ = {
 			isa = PBXGroup;
 			children = (
-				F29FE6532A45B78F00EAAC87 /* Showcases.swift */,
 				F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */,
 				F237CD532A536D5600A6FA3A /* ShowcaseVideo.swift */,
 				F22525272A486E14005352D4 /* ShowcaseHeading.swift */,
 				F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */,
 				F22CA78C2A5714B600EE2EB2 /* ShowcaseLink.swift */,
 				F2918BB62A5C5FFE00CF328B /* ShowcaseContextMenu.swift */,
-				F226E17E2A5D557F000DEF09 /* ShowcaseModelView.swift */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -232,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				F2A0C2282A5EAD1B000F099B /* ShaderShowcaseModel.swift */,
+				F226E17E2A5D557F000DEF09 /* ShowcaseModelView.swift */,
+				F29FE6532A45B78F00EAAC87 /* Showcases.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,16 +239,16 @@
 				F2DB79422A4F99B300C2F727 /* Blacklight.metal */,
 				F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */,
 				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
-				F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */,
+				F2DB79482A4F9A7100C2F727 /* ColorChannelMixer.metal */,
 				F2DB79372A4EF19600C2F727 /* Contrast.metal */,
 				F2DB79462A4F99F500C2F727 /* Deepfry.metal */,
 				F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */,
 				F23754402A518D2E003B2BEB /* EdgeDetection.metal */,
+				F23166AF2A53877E00C3078B /* Exposure.metal */,
 				F2DB79402A4F98E300C2F727 /* Greyscale.metal */,
 				F2DB79562A4F9ADA00C2F727 /* Halftone.metal */,
 				F2DB79542A4F9ACD00C2F727 /* Infrared.metal */,
 				F2DB793E2A4F984800C2F727 /* Intensity.metal */,
-				F23166AF2A53877E00C3078B /* Exposure.metal */,
 				F2DB793A2A4F961B00C2F727 /* Invert.metal */,
 				F2DB79522A4F9AC000C2F727 /* Posterize.metal */,
 				F272720B2A54C1C6007E9FC5 /* RandomColors.metal */,
@@ -368,13 +365,13 @@
 				F23166B02A53877F00C3078B /* Exposure.metal in Sources */,
 				F22CA7922A5772F300EE2EB2 /* RandomColorsNew.swift in Sources */,
 				F2DB793F2A4F984800C2F727 /* Intensity.metal in Sources */,
-				F2DB79492A4F9A7100C2F727 /* ColorChannel.metal in Sources */,
+				F2DB79492A4F9A7100C2F727 /* ColorChannelMixer.metal in Sources */,
 				F260EACB2A4CEB8800EA5E0F /* VHS.metal in Sources */,
 				F237CD542A536D5600A6FA3A /* ShowcaseVideo.swift in Sources */,
 				F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */,
 				F259E6682A4B71E3006E7CF1 /* Waves.swift in Sources */,
 				F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */,
-				F29917812A4308B0005DBC70 /* MetalShaderShowcases.swift in Sources */,
+				F29917812A4308B0005DBC70 /* Metallurgy.swift in Sources */,
 				F259E66A2A4B71FD006E7CF1 /* Waves.metal in Sources */,
 				F2F56F4F2A5037C500849DBE /* Blacklight.swift in Sources */,
 				F2F56F532A5037D400849DBE /* ColorChannelMixer.swift in Sources */,
@@ -392,7 +389,6 @@
 				F2F56F632A50380900849DBE /* Halftone.swift in Sources */,
 				F2DB79432A4F99B300C2F727 /* Blacklight.metal in Sources */,
 				F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */,
-				F22CA7902A57154900EE2EB2 /* LibraryView.swift in Sources */,
 				F2F56F752A5038E500849DBE /* StaticNoise.swift in Sources */,
 				F2F56F672A50382A00849DBE /* Intensity.swift in Sources */,
 				F2F56F552A5037DC00849DBE /* Contrast.swift in Sources */,

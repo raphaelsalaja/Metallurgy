@@ -1,6 +1,6 @@
 //
 //  ShowcaseImage.swift
-//  MetalShaderShowcases
+//  ShowcaseShowcases
 //
 //  Created by Raphael S on 21/06/2023.
 //

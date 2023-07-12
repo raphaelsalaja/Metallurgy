@@ -103,30 +103,58 @@ class Argument: Identifiable, ObservableObject {
     }
 }
 
-class MetalShader: Identifiable, ObservableObject {
+class Showcase: Identifiable, ObservableObject {
     var id = UUID()
     let name: String
     let author: String
-    let isTimeBased: Bool
+    let time: Bool
     let function: String
     let category: Categories
     @Published var arguments: [Argument]
 
-    init() {
-        self.name = ""
-        self.author = ""
-        self.isTimeBased = false
-        self.function = ""
-        self.category = .Color
-        self.arguments = []
-    }
-
-    init(name: String, author: String, function: String, category: Categories, arguments: [Argument]) {
+    internal init(id: UUID = UUID(), name: String, author: String, time: Bool, function: String, category: Categories, arguments: [Argument]) {
+        self.id = id
         self.name = name
         self.author = author
-        self.isTimeBased = false
+        self.time = time
         self.function = function
         self.category = category
         self.arguments = arguments
+    }
+
+    init(name: String, function: String, category: Categories, time: Bool, arguments: [Argument]) {
+        self.name = name
+        self.author = "Raphael Salaja"
+        self.time = true
+        self.function = function
+        self.category = category
+        self.arguments = arguments
+    }
+
+    init(name: String, function: String, category: Categories, arguments: [Argument]) {
+        self.name = name
+        self.author = "Raphael Salaja"
+        self.time = false
+        self.function = function
+        self.category = category
+        self.arguments = arguments
+    }
+
+    init(name: String, function: String, arguments: [Argument]) {
+        self.name = name
+        self.author = "Raphael Salaja"
+        self.time = false
+        self.function = function
+        self.category = .Layer
+        self.arguments = arguments
+    }
+
+    init() {
+        self.name = ""
+        self.author = ""
+        self.time = false
+        self.function = ""
+        self.category = .Color
+        self.arguments = []
     }
 }
