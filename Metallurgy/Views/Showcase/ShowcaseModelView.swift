@@ -11,18 +11,71 @@ extension Image {
     }
 }
 
+struct ColorEffectModifier: ViewModifier {
+    var shader: Shader
+
+    func body(content: Content) -> some View {
+        content
+            .colorEffect(
+                self.shader
+            )
+    }
+}
+
+struct LayerEffectModifier: ViewModifier {
+    var shader: Shader
+
+    func body(content: Content) -> some View {
+        content
+            .layerEffect(
+                self.shader,
+                maxSampleOffset: .zero
+            )
+    }
+}
+
+struct DistortionEffectModifier: ViewModifier {
+    @State var shader: MetalShader
+    @State var time = Date()
+
+    func CreateArguments(time: Shader.Argument, size: Shader.Argument) -> [Shader.Argument] {
+        var args: [Shader.Argument] = []
+
+        args.append(time)
+        args.append(size)
+
+        for argument in self.shader.arguments {
+            args.append(Shader.Argument.float(argument.value))
+        }
+
+        return args
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .visualEffect { content, proxy in
+                content
+                    .distortionEffect(
+                        Shader(
+                            function: ShaderFunction(library: .default, name: self.shader.function),
+                            arguments: self.CreateArguments(
+                                time: Shader.Argument.float(self.time.timeIntervalSinceNow),
+                                size: Shader.Argument.float2(proxy.size)
+                            )
+
+                        ),
+                        maxSampleOffset: .zero
+                    )
+            }
+    }
+}
+
 struct ShowcaseModelView: View {
-    // MARK: - Model
-
     @StateObject var metalshader = MetalShader()
-
-    // MARK: - Shader
 
     @State var arguments: [Shader.Argument] = []
     @State var shader: Shader = .init(function: .init(library: .default, name: ""), arguments: [])
     @State var function: ShaderFunction = .init(library: .default, name: "")
-
-    // MARK: - Photos Picker
 
     @State var photosPickerImage: Image?
     @State var showingPhotosPicker = false
@@ -44,9 +97,6 @@ struct ShowcaseModelView: View {
         self.shader = Shader(function: self.function, arguments: self.arguments)
     }
 
-    // MARK: - Update Shader
-
-    // Takes in new arguments and updates the shader
     func UpdateShader() {
         self.arguments = []
         for argument in self.metalshader.arguments {
@@ -64,27 +114,38 @@ struct ShowcaseModelView: View {
                 Section {
                     ZStack(alignment: .topTrailing) {
                         if let photosPickerImage {
-                            photosPickerImage
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                                .layerEffect(
-                                    self.shader,
-                                    maxSampleOffset: .zero
-                                )
+                            switch self.metalshader.category {
+                            case .Color:
+                                photosPickerImage
+                                    .ShowcaseImageSetup()
+                                    .modifier(ColorEffectModifier(shader: self.shader))
+                            case .Layer:
+                                photosPickerImage
+                                    .ShowcaseImageSetup()
+                                    .modifier(LayerEffectModifier(shader: self.shader))
+                            case .Distortion:
+                                photosPickerImage
+                                    .ShowcaseImageSetup()
+                                    .modifier(DistortionEffectModifier(shader: self.metalshader))
+                            }
                         }
 
                         if photosPickerImage == nil {
-                            Image(.car)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(maxWidth: .infinity)
-                                .layerEffect(
-                                    self.shader,
-                                    maxSampleOffset: .zero
-                                )
+                            switch self.metalshader.category {
+                            case .Color:
+                                Image(.car)
+                                    .ShowcaseImageSetup()
+                                    .modifier(ColorEffectModifier(shader: self.shader))
+                            case .Layer:
+                                Image(.car)
+                                    .ShowcaseImageSetup()
+                                    .modifier(LayerEffectModifier(shader: self.shader))
+                            case .Distortion:
+                                Image(.car)
+                                    .ShowcaseImageSetup()
+                                    .modifier(DistortionEffectModifier(shader: self.metalshader))
+                            }
                         }
-
                         VStack {
                             CategoryButton(category: self.metalshader.category)
                         }.padding()
@@ -144,7 +205,7 @@ struct ShowcaseModelView: View {
                         }
                     }
                 }
-                .navigationTitle("Random Colors")
+                .navigationTitle(self.metalshader.name)
                 .navigationBarTitleDisplayMode(.inline)
             }
         }

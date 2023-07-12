@@ -33,7 +33,8 @@
 		F29917822A4308B0005DBC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EAA9A264EE37A00B057E5 /* ContentView.swift */; };
 		F29FC8742A5C18FA0058D3F0 /* SlidingRuler in Frameworks */ = {isa = PBXBuildFile; productRef = F29FC8732A5C18FA0058D3F0 /* SlidingRuler */; };
 		F29FE6502A45942F00EAAC87 /* Sepia.metal in Sources */ = {isa = PBXBuildFile; fileRef = F29FE64F2A45942F00EAAC87 /* Sepia.metal */; };
-		F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6532A45B78F00EAAC87 /* Shader.swift */; };
+		F29FE6542A45B78F00EAAC87 /* Showcases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29FE6532A45B78F00EAAC87 /* Showcases.swift */; };
+		F2A0C2292A5EAD1B000F099B /* ShaderShowcaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0C2282A5EAD1B000F099B /* ShaderShowcaseModel.swift */; };
 		F2B997642A470FE500F872D3 /* ChromaticAbberation.metal in Sources */ = {isa = PBXBuildFile; fileRef = F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */; };
 		F2B997662A47106E00F872D3 /* ChromaticAbberation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */; };
 		F2B997682A47B64200F872D3 /* ShowcaseParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */; };
@@ -92,7 +93,8 @@
 		F272720D2A54CABD007E9FC5 /* RandomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColors.swift; sourceTree = "<group>"; };
 		F2918BB62A5C5FFE00CF328B /* ShowcaseContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseContextMenu.swift; sourceTree = "<group>"; };
 		F29FE64F2A45942F00EAAC87 /* Sepia.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Sepia.metal; sourceTree = "<group>"; };
-		F29FE6532A45B78F00EAAC87 /* Shader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shader.swift; sourceTree = "<group>"; };
+		F29FE6532A45B78F00EAAC87 /* Showcases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Showcases.swift; sourceTree = "<group>"; };
+		F2A0C2282A5EAD1B000F099B /* ShaderShowcaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderShowcaseModel.swift; sourceTree = "<group>"; };
 		F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ChromaticAbberation.metal; sourceTree = "<group>"; };
 		F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticAbberation.swift; sourceTree = "<group>"; };
 		F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseParameter.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				F23754442A518D80003B2BEB /* Media.xcassets */,
 				518EAA98264EE37A00B057E5 /* MetalShaderShowcases.swift */,
 				F29FE6552A45B93400EAAC87 /* Models */,
+				F2A0C2272A5EACBE000F099B /* Shaders */,
 				F2BCB1122A42FE410010EBF7 /* Views */,
 			);
 			path = Metallurgy;
@@ -168,25 +171,26 @@
 		F21878772A41DC3600640BAA /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F272720F2A54CAD5007E9FC5 /* Random Colors */,
-				F237542C2A5189F1003B2BEB /* Blacklight */,
-				F237542D2A5189FE003B2BEB /* Bloom */,
-				F237542E2A518A03003B2BEB /* Chromatic Abberation */,
-				F237542F2A518A56003B2BEB /* Color Channel Mixer */,
-				F23754302A518A62003B2BEB /* Contrast */,
-				F23754312A518A69003B2BEB /* Deepfry */,
-				F23754322A518A75003B2BEB /* Dithering */,
-				F237543F2A518D2E003B2BEB /* Edge Detection */,
-				F23754342A518A93003B2BEB /* Greyscale */,
-				F23754352A518A9B003B2BEB /* Halftone */,
-				F23754362A518AA2003B2BEB /* Infrared */,
-				F23754372A518AAB003B2BEB /* Intensity */,
-				F23754382A518AB0003B2BEB /* Invert */,
-				F237543A2A518ADA003B2BEB /* Posterize */,
-				F27272082A54BAD4007E9FC5 /* Static Noise */,
-				F237543B2A518AE4003B2BEB /* VHS */,
-				F237542A2A5189BC003B2BEB /* Sepia */,
-				F237542B2A5189D9003B2BEB /* Waves */,
+				F2F56F6C2A50387E00849DBE /* Posterize.swift */,
+				F272720D2A54CABD007E9FC5 /* RandomColors.swift */,
+				F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */,
+				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
+				F2F56F742A5038E500849DBE /* StaticNoise.swift */,
+				F27272092A54BAE7007E9FC5 /* VHS.swift */,
+				F2F56F4E2A5037C500849DBE /* Blacklight.swift */,
+				F2F56F502A5037C900849DBE /* Bloom.swift */,
+				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
+				F2F56F522A5037D400849DBE /* ColorChannelMixer.swift */,
+				F2F56F542A5037DC00849DBE /* Contrast.swift */,
+				F2F56F562A5037E100849DBE /* Deepfry.swift */,
+				F2F56F5A2A5037F500849DBE /* Dithering.swift */,
+				F23754412A518D2E003B2BEB /* EdgeDetection.swift */,
+				F2F56F602A50380400849DBE /* Greyscale.swift */,
+				F2F56F622A50380800849DBE /* Halftone.swift */,
+				F2F56F642A50380E00849DBE /* Infrared.swift */,
+				F2F56F662A50382A00849DBE /* Intensity.swift */,
+				F2F56F682A50382E00849DBE /* Invert.swift */,
+				F259E6672A4B71E3006E7CF1 /* Waves.swift */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -200,160 +204,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		F237542A2A5189BC003B2BEB /* Sepia */ = {
-			isa = PBXGroup;
-			children = (
-				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
-				F2BCB1102A4258A10010EBF7 /* Sepia.swift */,
-			);
-			path = Sepia;
-			sourceTree = "<group>";
-		};
-		F237542B2A5189D9003B2BEB /* Waves */ = {
-			isa = PBXGroup;
-			children = (
-				F259E6692A4B71FD006E7CF1 /* Waves.metal */,
-				F259E6672A4B71E3006E7CF1 /* Waves.swift */,
-			);
-			path = Waves;
-			sourceTree = "<group>";
-		};
-		F237542C2A5189F1003B2BEB /* Blacklight */ = {
-			isa = PBXGroup;
-			children = (
-				F2F56F4E2A5037C500849DBE /* Blacklight.swift */,
-				F2DB79422A4F99B300C2F727 /* Blacklight.metal */,
-			);
-			path = Blacklight;
-			sourceTree = "<group>";
-		};
-		F237542D2A5189FE003B2BEB /* Bloom */ = {
-			isa = PBXGroup;
-			children = (
-				F2F56F502A5037C900849DBE /* Bloom.swift */,
-				F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */,
-			);
-			path = Bloom;
-			sourceTree = "<group>";
-		};
-		F237542E2A518A03003B2BEB /* Chromatic Abberation */ = {
-			isa = PBXGroup;
-			children = (
-				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
-				F2B997652A47106E00F872D3 /* ChromaticAbberation.swift */,
-			);
-			path = "Chromatic Abberation";
-			sourceTree = "<group>";
-		};
-		F237542F2A518A56003B2BEB /* Color Channel Mixer */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */,
-				F2F56F522A5037D400849DBE /* ColorChannelMixer.swift */,
-			);
-			path = "Color Channel Mixer";
-			sourceTree = "<group>";
-		};
-		F23754302A518A62003B2BEB /* Contrast */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79372A4EF19600C2F727 /* Contrast.metal */,
-				F2F56F542A5037DC00849DBE /* Contrast.swift */,
-			);
-			path = Contrast;
-			sourceTree = "<group>";
-		};
-		F23754312A518A69003B2BEB /* Deepfry */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79462A4F99F500C2F727 /* Deepfry.metal */,
-				F2F56F562A5037E100849DBE /* Deepfry.swift */,
-			);
-			path = Deepfry;
-			sourceTree = "<group>";
-		};
-		F23754322A518A75003B2BEB /* Dithering */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */,
-				F2F56F5A2A5037F500849DBE /* Dithering.swift */,
-			);
-			path = Dithering;
-			sourceTree = "<group>";
-		};
-		F23754342A518A93003B2BEB /* Greyscale */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79402A4F98E300C2F727 /* Greyscale.metal */,
-				F2F56F602A50380400849DBE /* Greyscale.swift */,
-			);
-			path = Greyscale;
-			sourceTree = "<group>";
-		};
-		F23754352A518A9B003B2BEB /* Halftone */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79562A4F9ADA00C2F727 /* Halftone.metal */,
-				F2F56F622A50380800849DBE /* Halftone.swift */,
-			);
-			path = Halftone;
-			sourceTree = "<group>";
-		};
-		F23754362A518AA2003B2BEB /* Infrared */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79542A4F9ACD00C2F727 /* Infrared.metal */,
-				F2F56F642A50380E00849DBE /* Infrared.swift */,
-			);
-			path = Infrared;
-			sourceTree = "<group>";
-		};
-		F23754372A518AAB003B2BEB /* Intensity */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB793E2A4F984800C2F727 /* Intensity.metal */,
-				F23166AF2A53877E00C3078B /* Exposure.metal */,
-				F2F56F662A50382A00849DBE /* Intensity.swift */,
-			);
-			path = Intensity;
-			sourceTree = "<group>";
-		};
-		F23754382A518AB0003B2BEB /* Invert */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB793A2A4F961B00C2F727 /* Invert.metal */,
-				F2F56F682A50382E00849DBE /* Invert.swift */,
-			);
-			path = Invert;
-			sourceTree = "<group>";
-		};
-		F237543A2A518ADA003B2BEB /* Posterize */ = {
-			isa = PBXGroup;
-			children = (
-				F2DB79522A4F9AC000C2F727 /* Posterize.metal */,
-				F2F56F6C2A50387E00849DBE /* Posterize.swift */,
-			);
-			path = Posterize;
-			sourceTree = "<group>";
-		};
-		F237543B2A518AE4003B2BEB /* VHS */ = {
-			isa = PBXGroup;
-			children = (
-				F27272092A54BAE7007E9FC5 /* VHS.swift */,
-				F260EACA2A4CEB8800EA5E0F /* VHS.metal */,
-			);
-			path = VHS;
-			sourceTree = "<group>";
-		};
-		F237543F2A518D2E003B2BEB /* Edge Detection */ = {
-			isa = PBXGroup;
-			children = (
-				F23754402A518D2E003B2BEB /* EdgeDetection.metal */,
-				F23754412A518D2E003B2BEB /* EdgeDetection.swift */,
-			);
-			path = "Edge Detection";
-			sourceTree = "<group>";
-		};
 		F24E928C2A4B87B400176603 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,28 +213,10 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F27272082A54BAD4007E9FC5 /* Static Noise */ = {
-			isa = PBXGroup;
-			children = (
-				F2F56F742A5038E500849DBE /* StaticNoise.swift */,
-				F23166AD2A5382DA00C3078B /* StaticNoise.metal */,
-			);
-			path = "Static Noise";
-			sourceTree = "<group>";
-		};
-		F272720F2A54CAD5007E9FC5 /* Random Colors */ = {
-			isa = PBXGroup;
-			children = (
-				F272720B2A54C1C6007E9FC5 /* RandomColors.metal */,
-				F272720D2A54CABD007E9FC5 /* RandomColors.swift */,
-				F22CA7912A5772F300EE2EB2 /* RandomColorsNew.swift */,
-			);
-			path = "Random Colors";
-			sourceTree = "<group>";
-		};
 		F29FE64E2A45940F00EAAC87 /* Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				F29FE6532A45B78F00EAAC87 /* Showcases.swift */,
 				F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */,
 				F237CD532A536D5600A6FA3A /* ShowcaseVideo.swift */,
 				F22525272A486E14005352D4 /* ShowcaseHeading.swift */,
@@ -399,9 +231,36 @@
 		F29FE6552A45B93400EAAC87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F29FE6532A45B78F00EAAC87 /* Shader.swift */,
+				F2A0C2282A5EAD1B000F099B /* ShaderShowcaseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F2A0C2272A5EACBE000F099B /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB79422A4F99B300C2F727 /* Blacklight.metal */,
+				F2DB794E2A4F9AAB00C2F727 /* Bloom.metal */,
+				F2B997632A470FE500F872D3 /* ChromaticAbberation.metal */,
+				F2DB79482A4F9A7100C2F727 /* ColorChannel.metal */,
+				F2DB79372A4EF19600C2F727 /* Contrast.metal */,
+				F2DB79462A4F99F500C2F727 /* Deepfry.metal */,
+				F2DB794C2A4F9A8D00C2F727 /* Dithering.metal */,
+				F23754402A518D2E003B2BEB /* EdgeDetection.metal */,
+				F2DB79402A4F98E300C2F727 /* Greyscale.metal */,
+				F2DB79562A4F9ADA00C2F727 /* Halftone.metal */,
+				F2DB79542A4F9ACD00C2F727 /* Infrared.metal */,
+				F2DB793E2A4F984800C2F727 /* Intensity.metal */,
+				F23166AF2A53877E00C3078B /* Exposure.metal */,
+				F2DB793A2A4F961B00C2F727 /* Invert.metal */,
+				F2DB79522A4F9AC000C2F727 /* Posterize.metal */,
+				F272720B2A54C1C6007E9FC5 /* RandomColors.metal */,
+				F29FE64F2A45942F00EAAC87 /* Sepia.metal */,
+				F23166AD2A5382DA00C3078B /* StaticNoise.metal */,
+				F260EACA2A4CEB8800EA5E0F /* VHS.metal */,
+				F259E6692A4B71FD006E7CF1 /* Waves.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 		F2BCB1122A42FE410010EBF7 /* Views */ = {
@@ -524,9 +383,10 @@
 				F2F56F6D2A50387E00849DBE /* Posterize.swift in Sources */,
 				F2DB793B2A4F961B00C2F727 /* Invert.metal in Sources */,
 				F2DB79382A4EF19600C2F727 /* Contrast.metal in Sources */,
-				F29FE6542A45B78F00EAAC87 /* Shader.swift in Sources */,
+				F29FE6542A45B78F00EAAC87 /* Showcases.swift in Sources */,
 				F2DB79472A4F99F500C2F727 /* Deepfry.metal in Sources */,
 				F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */,
+				F2A0C2292A5EAD1B000F099B /* ShaderShowcaseModel.swift in Sources */,
 				F2DB79532A4F9AC000C2F727 /* Posterize.metal in Sources */,
 				F259E6612A4B2655006E7CF1 /* CategoryButton.swift in Sources */,
 				F2F56F632A50380900849DBE /* Halftone.swift in Sources */,

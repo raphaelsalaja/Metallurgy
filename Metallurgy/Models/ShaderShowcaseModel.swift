@@ -130,15 +130,3 @@ class MetalShader: Identifiable, ObservableObject {
         self.arguments = arguments
     }
 }
-
-final class ShaderShowcases {
-    var shaders: [MetalShader] = [
-        MetalShader(
-            name: "Blacklight",
-            author: "Raphael Salaja",
-            function: "blacklight",
-            category: .Layer,
-            arguments: [Argument(name: "Strength", range: 0 ... 10)]
-        ),
-    ]
-}

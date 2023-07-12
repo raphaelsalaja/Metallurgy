@@ -5,7 +5,7 @@ struct Bloom: View {
     @Binding var author: String
     @Binding var category: Categories
 
-    @State var strength: Float = 0
+    @State var strength: Float = 2
 
     var body: some View {
         TimelineView(.animation) { _ in
