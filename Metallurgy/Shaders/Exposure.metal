@@ -3,10 +3,16 @@
 
 using namespace metal;
 
-[[ stitchable ]] half4 exposure(float2 position, SwiftUI::Layer layer, float strength) {
-    half4 original_color =  layer.sample(position);
+[[ stitchable ]] half4 exposure(float2 position, half4 color, float strength) {
+    // FIRST, WE STORE THE ORIGINAL COLOR.
+    half4 original_color = color;
     
-    half3 new_color = half3(1.0) - exp(-original_color.rgb * strength);
+    // WE CREATE A NEW COLOR VARIABLE TO STORE THE MODIFIED COLOR.
+    half4 new_color = original_color;
     
-    return half4(new_color, original_color.a);
+ 
+    
+    new_color = half4(1.0) - exp(-original_color * (strength * 10));
+    
+    return new_color;
 }

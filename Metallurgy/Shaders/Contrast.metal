@@ -3,16 +3,41 @@
 
 using namespace metal;
 
-[[ stitchable ]] half4 contrast_layer(float2 position, SwiftUI::Layer layer, float strength) {
-    half3 color = layer.sample(position).rgb;
+// --- CONTRAST
+
+// --- DESCRIPTION
+// https://en.wikipedia.org/wiki/Contrast_(vision)
+
+// --- COLOR EFFECT:
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
+
+[[ stitchable ]] half4 contrast(float2 position, half4 color, float strength) {
+
+    // FIRST, WE STORE THE ORIGINAL COLOR.
+    half4 original_color = color;
     
-    if (strength == 0) {
-        return half4(color, layer.sample(position).a);
+    // WE CREATE A NEW COLOR VARIABLE TO STORE THE MODIFIED COLOR.
+    half4 new_color = original_color;
+    
+    // WE CHECK IF THE STRENGTH VALUE IS LESS THAN 0.1.
+    if (strength < 0.1 ) {
+        
+        // IF IT IS, WE SET THE STRENGTH TO 0.1 TO AVOID EXTREME CONTRAST ADJUSTMENTS.
+        strength = 0.1;
+        
     }
     
-    color -= 0.5;
-    color *= strength;
-    color += 0.5;
+    // WE SUBTRACT 0.5 FROM EACH COLOR CHANNEL TO SHIFT THE RANGE TO [-0.5, 0.5].
+    new_color -= 0.5;
     
-    return half4(color, layer.sample(position).a);
+    // THEN MULTIPLY EACH COLOR CHANNEL BY THE STRENGTH VALUE TO ADJUST THE CONTRAST.
+    new_color *= strength;
+    
+    // AND FINALLY ADD 0.5 TO EACH COLOR CHANNEL TO SHIFT THE RANGE BACK TO [0, 1].
+    new_color += 0.5;
+    
+    // FINALLY, WE RETURN THE MODIFIED COLOR.
+    return new_color;
+    
 }
+

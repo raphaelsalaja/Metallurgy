@@ -61,6 +61,6 @@ half3 HSVToRGB( half3 HSV ){
         
     }
     
-    return mix(x,layer.sample(uv),strength);
+    return mix(x,layer.sample(uv),strength * 10);
     
 }

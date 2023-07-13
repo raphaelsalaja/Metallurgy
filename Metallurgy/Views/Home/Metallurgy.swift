@@ -4,7 +4,7 @@ import SwiftUI
 struct Metallurgy: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().preferredColorScheme(.dark)
         }
     }
 }

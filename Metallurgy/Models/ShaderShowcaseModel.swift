@@ -97,7 +97,7 @@ class Argument: Identifiable, ObservableObject {
 
     init(name: String, range: ClosedRange<Float>) {
         self.name = name
-        self.value = (range.lowerBound + range.upperBound) / 2
+        self.value = Float.random(in: range)
         self.range = range
         self.editable = true
     }
@@ -106,53 +106,77 @@ class Argument: Identifiable, ObservableObject {
 class Showcase: Identifiable, ObservableObject {
     var id = UUID()
     let name: String
-    let author: String
     let time: Bool
+    let size: Bool
     let function: String
     let category: Categories
     @Published var arguments: [Argument]
 
-    internal init(id: UUID = UUID(), name: String, author: String, time: Bool, function: String, category: Categories, arguments: [Argument]) {
+    init(id: UUID = UUID(), name: String, function: String, category: Categories, arguments: [Argument]) {
         self.id = id
         self.name = name
-        self.author = author
+        self.time = false
+        self.size = false
+        self.function = function
+        self.category = category
+        self.arguments = arguments
+    }
+
+    init(id: UUID = UUID(), name: String, time: Bool, function: String, category: Categories, arguments: [Argument]) {
+        self.id = id
+        self.name = name
         self.time = time
+        self.size = false
         self.function = function
         self.category = category
         self.arguments = arguments
     }
 
-    init(name: String, function: String, category: Categories, time: Bool, arguments: [Argument]) {
+    init(id: UUID = UUID(), name: String, time: Bool, size: Bool, function: String, category: Categories, arguments: [Argument]) {
+        self.id = id
         self.name = name
-        self.author = "Raphael Salaja"
-        self.time = true
+        self.time = time
+        self.size = size
         self.function = function
         self.category = category
         self.arguments = arguments
     }
 
-    init(name: String, function: String, category: Categories, arguments: [Argument]) {
+    init(id: UUID = UUID(), name: String, time: Bool, size: Bool, function: String, category: Categories) {
+        self.id = id
         self.name = name
-        self.author = "Raphael Salaja"
+        self.time = time
+        self.size = size
+        self.function = function
+        self.category = category
+        self.arguments = []
+    }
+
+    init(id: UUID = UUID(), name: String, time: Bool, function: String, category: Categories) {
+        self.id = id
+        self.name = name
+        self.time = time
+        self.size = false
+        self.function = function
+        self.category = category
+        self.arguments = []
+    }
+
+    init(id: UUID = UUID(), name: String, function: String, category: Categories) {
+        self.id = id
+        self.name = name
         self.time = false
+        self.size = false
         self.function = function
         self.category = category
-        self.arguments = arguments
-    }
-
-    init(name: String, function: String, arguments: [Argument]) {
-        self.name = name
-        self.author = "Raphael Salaja"
-        self.time = false
-        self.function = function
-        self.category = .Layer
-        self.arguments = arguments
+        self.arguments = [Argument(name: "Strength", range: 0 ... 1)]
     }
 
     init() {
+        self.id = UUID()
         self.name = ""
-        self.author = ""
         self.time = false
+        self.size = false
         self.function = ""
         self.category = .Color
         self.arguments = []

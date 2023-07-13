@@ -25,17 +25,30 @@ half3 heatMap(float greyValue) {
     return heat;
 }
 
-[[ stitchable ]] half4 infrared(float2 position, SwiftUI::Layer layer, float time, float strength) {
-    half4 color = layer.sample(position);
+[[ stitchable ]] half4 infrared(float2 position, half4 color, float multiplier, float strength) {
+    
+    // FIRST, WE STORE THE ORIGINAL COLOR.
+    half4 original_color = color;
+    
+    // WE CREATE A NEW COLOR VARIABLE TO STORE THE MODIFIED COLOR.
+    half4 new_color = original_color;
+    
+    // WE CHECK IF THE STRENGTH VALUE IS LESS THAN 0.1.
+    if (strength < 0.1 ) {
+        
+        // IF IT IS, WE SET THE STRENGTH TO 0.1 TO AVOID EXTREME BLACKLIGHT ADJUSTMENTS.
+        strength = 0.1;
+        
+    }
     
     float greyValueA = greyScale(color.rgb);
     
-    float multiplier = clamp(abs(sin(time * 0.5)) + 0.2, 0.2, 1.00);
+    float scale = clamp(abs(sin(multiplier)) + 0.2, 0.2, 1.00);
     
-    half3 x = heatMap(greyValueA * multiplier);
+    half3 x = heatMap(greyValueA * scale);
     
-    half4 final = half4(x, color.a);
+    new_color = half4(x, original_color.a);
 
-    return half4(mix(color.rgb, final.rgb, strength), color.a);
+    return half4(mix(original_color.rgb, new_color.rgb, strength), color.a);
 
 }

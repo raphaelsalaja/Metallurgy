@@ -35,13 +35,6 @@ struct ShowcaseLink: View {
     var body: some View {
         NavigationLink(destination: ShowcaseModelView(showcase: showcase)) {
             HStack(spacing: 12) {
-                GetIcon()
-                    .foregroundColor(.white)
-                    .font(.footnote)
-                    .frame(width: 28, height: 28)
-                    .background(color())
-                    .cornerRadius(6)
-
                 Text(showcase.name)
             }
         }

@@ -3,12 +3,12 @@
 
 using namespace metal;
 
-[[ stitchable ]] half4 chromatic_abberation_static(float2 position, SwiftUI::Layer layer, float red, float green, float blue) {
+[[ stitchable ]] half4 chromatic_abberation_static(float2 position, SwiftUI::Layer layer, float red, float blue) {
     half4 original_color = layer.sample(position);
     half4 new_color = original_color;
     
     new_color.r = layer.sample(position - float2(red, -red)).r;
-    new_color.g = layer.sample(position - float2(green, -green)).g;
+    new_color.g = layer.sample(position).g;
     new_color.b = layer.sample(position - float2(blue, -blue)).b;
     new_color.a = layer.sample(position).a;
 
@@ -16,11 +16,11 @@ using namespace metal;
 }
 
 
-[[ stitchable ]] half4 chromatic_abberation_shift(float2 position, SwiftUI::Layer layer, float time) {
+[[ stitchable ]] half4 chromatic_abberation_time(float2 position, SwiftUI::Layer layer, float time) {
     half4 original_color = layer.sample(position);
     half4 new_color = original_color;
     
-    float amount = 0.0;
+    float amount = 2.0;
     
     amount = (1.0 + sin(time*6.0)) * 0.5;
     amount *= 1.0 + sin(time*16.0) * 0.5;
@@ -30,7 +30,7 @@ using namespace metal;
     amount *= 0.75;
     
     new_color.r = layer.sample(position + float2(amount/2.2, -amount/2)).r;
-    new_color.g = layer.sample(position - float2(amount/2, -amount/2.4)).g;
+    new_color.g = layer.sample(position).g;
     new_color.b = layer.sample(position - float2(amount/2, -amount/2.1)).b;
     new_color.a = layer.sample(position).a;
     

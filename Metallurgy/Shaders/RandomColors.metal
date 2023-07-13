@@ -12,10 +12,7 @@ float hash_channel(half4 color, int i, float amount)
     return rand(floor(color[i] * int(amount)) + float(i));
 }
 
-[[ stitchable ]] half4 random(float2 position,
-                             SwiftUI::Layer layer,
-                             float amount,
-                             float strength)
+[[ stitchable ]] half4 random_colors(float2 position, SwiftUI::Layer layer, float amount, float strength)
 {
     float2 uv = position;
 
