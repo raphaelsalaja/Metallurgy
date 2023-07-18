@@ -3,25 +3,30 @@
 
 using namespace metal;
 
-// Creator: jmk
-// Porter: Raphael Salaja
-// Source: https://www.shadertoy.com/view/Mdf3zr
-// Category: Layer
+// DITHERING
+
+// DESCRIPTION
+// https://en.wikipedia.org/wiki/Edge_detection
+
+// LAYER EFFECT
+// https://developer.apple.com/documentation/swiftui/view/layereffect(_:maxsampleoffset:isenabled:
+
+// PORT
+// https://www.shadertoy.com/view/Mdf3zr
+
 float lookup(float2 p, float dx, float dy, SwiftUI::Layer layer, float time)
 {
-    float d = sin(time * 5.0)*0.5 + 1.5; // kernel offset
+    float d = sin(time * 5.0)*0.5 + 1.5;
 
     float2 uv = (p.xy + float2(dx * d, dy * d));
     half4 c = layer.sample(uv.xy);
     
-    // return as luma
     return 0.2126*c.r + 0.7152*c.g + 0.0722*c.b;
 }
 
 [[ stitchable ]] half4 edge_detection(float2 position, SwiftUI::Layer layer, float time) {
     float2 p = position.xy;
     
-    // simple sobel edge detection
     float gx = 0.0;
     gx += -1.0 * lookup(p, -1.0, -1.0, layer, time);
     gx += -2.0 * lookup(p, -1.0,  0.0, layer, time);
@@ -38,7 +43,6 @@ float lookup(float2 p, float dx, float dy, SwiftUI::Layer layer, float time)
     gy +=  2.0 * lookup(p,  0.0,  1.0, layer, time);
     gy +=  1.0 * lookup(p,  1.0,  1.0, layer, time);
     
-    // hack: use g^2 to conceal noise in the video
     float g = gx*gx + gy*gy;
     float g2 = g * (sin(time) / 2.0 + 0.5);
     

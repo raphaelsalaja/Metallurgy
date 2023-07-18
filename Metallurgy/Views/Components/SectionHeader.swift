@@ -37,7 +37,6 @@ struct SectionHeader: View {
                 .font(.headline)
                 .foregroundColor(color(category: category))
         }
-        .padding(.vertical, 8)
     }
 }
 

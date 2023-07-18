@@ -46,6 +46,10 @@ public struct LayerEffectModifier: ViewModifier {
         if self.shader.time {
             args.append(time)
         }
+        
+        if self.shader.bounding {
+            args.append(Shader.Argument.boundingRect)
+        }
 
         for argument in self.shader.arguments {
             args.append(Shader.Argument.float(argument.value))

@@ -3,10 +3,13 @@
 
 using namespace metal;
 
-half3 lerp(half3 colorone, half3 colortwo, float value)
-{
-    return (colorone + value*(colortwo-colorone));
-}
+// POSTERIZE
+
+// DESCRIPTION
+// https://en.wikipedia.org/wiki/Posterization
+
+// COLOR EFFECT
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
 
 half3 RGBToHSV( half3 RGB ){
     
@@ -22,7 +25,7 @@ half3 HSVToRGB( half3 HSV ){
     
     half4 k = half4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
     half3 p = abs(fract(HSV.xxx + k.xyz) * 6.0 - k.www);
-    return HSV.z * lerp(k.xxx, clamp(p - k.xxx, 0.0, 1.0), HSV.y);
+    return HSV.z * mix(k.xxx, clamp(p - k.xxx, 0.0, 1.0), HSV.y);
 }
 
 [[ stitchable ]] half4 posterize(float2 position, SwiftUI::Layer layer, float strength){

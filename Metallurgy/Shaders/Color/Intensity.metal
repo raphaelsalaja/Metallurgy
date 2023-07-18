@@ -3,7 +3,16 @@
 
 using namespace metal;
 
+// INTENSITY
+
+// DESCRIPTION
+// ADJUSTS THE INTENSITY OF THE COLORS IN THE VIEW.
+
+// COLOR EFFECT
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
+
 [[ stitchable ]] half4 intensity(float2 position, half4 color, float strength) {
+    
     // FIRST, WE STORE THE ORIGINAL COLOR.
     half4 original_color = color;
     
@@ -18,5 +27,10 @@ using namespace metal;
         
     }
     
+    // MULTIPLY THE STRENGTH BY 10 TO GET A MORE REALISTIC INTENSITY.
+    strength *= 10;
+    
+    // RETURN THE NEW COLOR WITH THE ADJUSTED INTENSITY.
     return new_color * strength;
+    
 }

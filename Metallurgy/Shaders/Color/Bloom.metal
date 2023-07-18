@@ -3,13 +3,13 @@
 
 using namespace metal;
 
-// --- BLOOM
+// BLOOM
 
-// --- DESCRIPTION
+// DESCRIPTION
 // https://en.wikipedia.org/wiki/Bloom_(shader_effect)
 
-// --- LAYER EFFECT
-// https://developer.apple.com/documentation/swiftui/view/layereffect(_:maxsampleoffset:isenabled:
+// COLOR EFFECT
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
 
 [[ stitchable ]] half4 bloom(float2 position, half4 color, float strength) {
     

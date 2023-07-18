@@ -6,17 +6,16 @@ final class ShaderShowcases {
 
         Showcase(name: "Posterize", function: "posterize", category: .Layer),
         Showcase(name: "Edge Detection", time: true, function: "edge_detection", category: .Layer),
-        Showcase(name: "Chromatic Abberation (Time)", time: true, function: "chromatic_abberation_time", category: .Layer),
+        Showcase(name: "Chromatic Abberation (Time)", time: true, function: "chromatic_abberation_time", category: .Layer,
+                 arguments: [
+                     Argument(name: "Strength", range: 0 ... 10),
+                 ]),
         Showcase(name: "Chromatic Abberation (Static)", function: "chromatic_abberation_static", category: .Layer,
                  arguments: [
                      Argument(name: "Red Channel", range: 0 ... 10),
                      Argument(name: "Blue Channel", range: 0 ... 10),
                  ]),
-        Showcase(name: "Halftone", time: true, function: "halftone", category: .Layer,
-                 arguments: [
-                     Argument(name: "Strength", range: 0 ... 10),
-                 ]),
-        Showcase(name: "Old TV Static", time: true, function: "tape", category: .Layer,
+        Showcase(name: "TV Static", time: true, function: "tv_static", category: .Layer,
                  arguments: [
                      Argument(name: "Strength", range: 0 ... 10),
                  ]),
@@ -30,13 +29,6 @@ final class ShaderShowcases {
             arguments: [
                 Argument(name: "Colors Amount", range: 0 ... 50),
                 Argument(name: "Strength", range: 0 ... 1),
-            ]),
-        Showcase(
-            name: "Color Channel Mixer", function: "color_channel_mixer", category: .Layer,
-            arguments: [
-                Argument(name: "Red", range: 0 ... 10),
-                Argument(name: "Green", range: 0 ... 10),
-                Argument(name: "Blue", range: 0 ... 10),
             ]),
         Showcase(
             name: "Video Home System", time: true, function: "vhs", category: .Layer,
@@ -59,6 +51,13 @@ final class ShaderShowcases {
         Showcase(name: "Sepia", function: "sepia", category: .Color),
         Showcase(name: "Greyscale", function: "greyscale", category: .Color),
         Showcase(name: "Exposure", function: "exposure", category: .Color),
+        Showcase(
+            name: "Color Channel Mixer", function: "color_channel_mixer", category: .Color,
+            arguments: [
+                Argument(name: "Red", range: 0 ... 10),
+                Argument(name: "Green", range: 0 ... 10),
+                Argument(name: "Blue", range: 0 ... 10),
+            ]),
         Showcase(
             name: "Infrared", function: "infrared", category: .Color,
             arguments: [

@@ -1,16 +1,16 @@
 #include <metal_stdlib>
 #include <SwiftUI/SwiftUI_Metal.h>
+
 using namespace metal;
 
-// --- BLACKLIGHT ---
+// BLACKLIGHT
 
-// --- DESCRIPTION
+// DESCRIPTION
 // https://en.wikipedia.org/wiki/Blacklight
 
-// --- LAYER EFFECT
-// https://developer.apple.com/documentation/swiftui/view/layereffect(_:maxsampleoffset:isenabled:
+// COLOR EFFECT
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
 
-// This function applies a blacklight effect to the layer at the specified position
 [[ stitchable ]] half4 blacklight(float2 position, half4 color, float strength) {
 
     // FIRST, WE STORE THE ORIGINAL COLOR.
@@ -43,4 +43,5 @@ using namespace metal;
     
     // RETURN THE NEW COLOR
     return new_color;
+    
 }

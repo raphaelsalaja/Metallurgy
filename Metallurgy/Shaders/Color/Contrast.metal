@@ -3,12 +3,12 @@
 
 using namespace metal;
 
-// --- CONTRAST
+// CONTRAST
 
-// --- DESCRIPTION
+// DESCRIPTION
 // https://en.wikipedia.org/wiki/Contrast_(vision)
 
-// --- COLOR EFFECT:
+// COLOR EFFECT
 // https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
 
 [[ stitchable ]] half4 contrast(float2 position, half4 color, float strength) {

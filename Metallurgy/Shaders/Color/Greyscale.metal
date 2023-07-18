@@ -3,6 +3,14 @@
 
 using namespace metal;
 
+// GREYSCALE
+
+// DESCRIPTION
+// https://en.wikipedia.org/wiki/Grayscale
+
+// COLOR EFFECT
+// https://developer.apple.com/documentation/swiftui/view/coloreffect(_:isenabled:)
+
 [[ stitchable ]] half4 greyscale(float2 position, half4 color, float strength) {
     
     // FIRST, WE STORE THE ORIGINAL COLOR.

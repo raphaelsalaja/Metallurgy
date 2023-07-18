@@ -3,6 +3,17 @@
 
 using namespace metal;
 
+// TV STATIC
+
+// DESCRIPTION
+// https://en.wikipedia.org/wiki/Noise_(video)
+
+// LAYER EFFECT
+// https://developer.apple.com/documentation/swiftui/view/layereffect(_:maxsampleoffset:isenabled:
+
+// PORT
+// https://www.shadertoy.com/view/tsX3RN
+
 float rand(float n){
     return fract(sin(n) * 43758.5453123);
 }
@@ -14,6 +25,7 @@ float hash_channel(half4 color, int i, float amount)
 
 [[ stitchable ]] half4 random_colors(float2 position, SwiftUI::Layer layer, float amount, float strength)
 {
+    // 
     float2 uv = position;
 
     half4 col = layer.sample(uv);
@@ -25,6 +37,4 @@ float hash_channel(half4 color, int i, float amount)
     
     return half4(mix(layer.sample(uv), col , strength));
 }
-
-
-
+ 
