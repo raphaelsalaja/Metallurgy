@@ -1,5 +1,4 @@
 import PhotosUI
-import SlidingRuler
 import SwiftUI
 
 extension Image {
@@ -100,12 +99,8 @@ struct ShowcaseModelView: View {
                         }
                     }
                     .contextMenu {
-                        Section {
-                            AnyView(UploadImageButton(showingPhotos: self.$showingPhotosPicker))
-                        }
-                        Section {
-                            MoreInformationButton()
-                        }
+                        UploadImageButton(showingPhotos: self.$showingPhotosPicker)
+                        MoreInformationButton(showcase: self.showcase)
                     }
                     .photosPicker(isPresented: self.$showingPhotosPicker,
                                   selection: self.$photosPickerItem,
