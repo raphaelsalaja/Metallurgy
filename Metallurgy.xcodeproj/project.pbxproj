@@ -24,7 +24,6 @@
 		F2339D522A434E5500FAAD78 /* ShowcaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2339D512A434E5500FAAD78 /* ShowcaseImage.swift */; };
 		F23754422A518D2E003B2BEB /* EdgeDetection.metal in Sources */ = {isa = PBXBuildFile; fileRef = F23754402A518D2E003B2BEB /* EdgeDetection.metal */; };
 		F23754452A518D80003B2BEB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23754442A518D80003B2BEB /* Media.xcassets */; };
-		F237CD542A536D5600A6FA3A /* ShowcaseVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237CD532A536D5600A6FA3A /* ShowcaseVideo.swift */; };
 		F259E6612A4B2655006E7CF1 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259E6602A4B2655006E7CF1 /* CategoryButton.swift */; };
 		F259E66A2A4B71FD006E7CF1 /* Simple Waves.metal in Sources */ = {isa = PBXBuildFile; fileRef = F259E6692A4B71FD006E7CF1 /* Simple Waves.metal */; };
 		F260EACB2A4CEB8800EA5E0F /* VideoHomeSystem.metal in Sources */ = {isa = PBXBuildFile; fileRef = F260EACA2A4CEB8800EA5E0F /* VideoHomeSystem.metal */; };
@@ -72,7 +71,6 @@
 		F23754402A518D2E003B2BEB /* EdgeDetection.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = EdgeDetection.metal; sourceTree = "<group>"; };
 		F23754442A518D80003B2BEB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		F23754462A518DA9003B2BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F237CD532A536D5600A6FA3A /* ShowcaseVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowcaseVideo.swift; sourceTree = "<group>"; };
 		F259E6602A4B2655006E7CF1 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		F259E6692A4B71FD006E7CF1 /* Simple Waves.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = "Simple Waves.metal"; sourceTree = "<group>"; };
 		F260EACA2A4CEB8800EA5E0F /* VideoHomeSystem.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VideoHomeSystem.metal; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				F22CA78C2A5714B600EE2EB2 /* ShowcaseLink.swift */,
 				F226E17E2A5D557F000DEF09 /* ShowcaseModelView.swift */,
 				F2B997672A47B64200F872D3 /* ShowcaseParameter.swift */,
-				F237CD532A536D5600A6FA3A /* ShowcaseVideo.swift */,
 			);
 			path = Showcase;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				F2DB793F2A4F984800C2F727 /* Intensity.metal in Sources */,
 				F2DB79492A4F9A7100C2F727 /* Color Channel Mixer.metal in Sources */,
 				F260EACB2A4CEB8800EA5E0F /* VideoHomeSystem.metal in Sources */,
-				F237CD542A536D5600A6FA3A /* ShowcaseVideo.swift in Sources */,
 				F2B997642A470FE500F872D3 /* Chromatic Abberation (Static).metal in Sources */,
 				F29917812A4308B0005DBC70 /* Metallurgy.swift in Sources */,
 				F259E66A2A4B71FD006E7CF1 /* Simple Waves.metal in Sources */,
