@@ -22,15 +22,15 @@ The project is set up like this to provide an emphasis on the shaders themselves
 
 The process for creating new shaders is fairly simple. There are only a few steps that need to be followed.
 
-### 1. Write A Shader File
+#### 1. Write A Shader File
 
 Firstly, you must create a new shader metal file. You can find examples from the repository here as well as checking out ShaderToy for more examples. To add a new shader, create a new file in the Shaders folder inside the respective subfolder of the shader type. For example, to add a new visual shader of type color, create a new file in the <code>Shaders/Color</code> folder. 
 
 Try to keep the file name and function name similar to prevent confusion. Use snake case when defining the name of the file to help keep consistency within the files. For example, if the shader name is <code>ColorShader</code>, the file name should be <code>color_shader.metal</code>.
 
-### 2. Add The Shader To The Model
+#### 2. Add The Shader To The Model
 
-Secondly, you must add the shader to the model. To do this, open the ShaderShowcases.swift file. This file holds the data for each shader. To add a new shader, create a new instance of the Showcase class. This class holds the data for each shader. See the Models section for more information on the Showcase class.
+Secondly, you must add the shader to the model. To do this, open the ShaderShowcases.swift file. This file holds the data for each shader. To add a new shader, create a new instance of the Showcase class. This class holds the data for each shader.
 
 ## Models
 
