@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ContentView: View {
     let insets = EdgeInsets(top: 8, leading: 0, bottom:
-                                8, trailing: 0)
+        8, trailing: 0)
 
     @State var shaders: [Showcase] = ShaderShowcases().shaders.sorted { $0.name < $1.name }
 
@@ -40,13 +40,6 @@ struct ContentView: View {
             .searchable(text: $search,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "Search")
-            .onChange(of: search) {
-                if search.isEmpty {
-                    shaders = []
-                } else {
-                    shaders = ShaderShowcases().shaders.filter { $0.name.contains(search) }
-                }
-            }
         }
     }
 }
