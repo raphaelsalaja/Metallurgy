@@ -39,6 +39,8 @@ using namespace metal;
     // WE MULTIPLY THE SIN VALUE BY 4 AND ADD 1 TO IT
     new_color.b = (sin(original_color.b * (strength * 4.0)) + 1.0) * 0.5;
     
+    
+    
     // WE RETURN THE NEW COLOR
     return new_color;
     

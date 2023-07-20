@@ -20,10 +20,10 @@ using namespace metal;
     half4 new_color = original_color;
     
     // WE CHECK IF THE STRENGTH VALUE IS LESS THAN 0.1.
-    if (strength < 0.1 ) {
+    if (strength < 1 ) {
         
         // IF IT IS, WE SET THE STRENGTH TO 0.1 TO AVOID EXTREME CONTRAST ADJUSTMENTS.
-        strength = 0.1;
+        strength = 1;
         
     }
     

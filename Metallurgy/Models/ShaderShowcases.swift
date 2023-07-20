@@ -1,6 +1,6 @@
 import Foundation
 
-final class ShaderShowcases {
+final class ShaderShowcases: ObservableObject {
     var shaders: [Showcase] = [
         // MARK: - LAYER
 

@@ -28,7 +28,7 @@ using namespace metal;
     }
     
     // MULTIPLY THE STRENGTH BY 10 TO GET A MORE REALISTIC INTENSITY.
-    strength *= 10;
+    strength *= 2;
     
     // RETURN THE NEW COLOR WITH THE ADJUSTED INTENSITY.
     return new_color * strength;

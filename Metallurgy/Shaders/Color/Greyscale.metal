@@ -20,11 +20,19 @@ using namespace metal;
     half4 new_color = original_color;
     
     // WE CHECK IF THE STRENGTH VALUE IS LESS THAN 0.1.
-    if (strength < 0.01) {
+    if (strength < 1.0) {
         
         // IF IT IS, WE SET THE STRENGTH TO 0.1 TO AVOID EXTREME BLACKLIGHT ADJUSTMENTS.
-        return original_color;
-
+        strength = 1;
+        
+    }
+    
+    if (strength > 3.0) {
+        
+        // IF IT IS, WE SET THE STRENGTH TO 0.1 TO AVOID EXTREME BLACKLIGHT ADJUSTMENTS.
+        
+        strength = 3;
+        
     }
     
     // WE CALCULATE THE NEW COLOR BY AVERAGING THE RED, GREEN, AND BLUE CHANNELS.
