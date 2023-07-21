@@ -283,6 +283,13 @@ struct ShaderPlayground: View {
     }
 }
 
-#Preview {
-    ShaderPlayground().preferredColorScheme(/*@START_MENU_TOKEN@*/ .dark/*@END_MENU_TOKEN@*/)
+struct ShaderPlayground_Previews: PreviewProvider {
+    static var previews: some View {
+        ShaderPlayground()
+            .preferredColorScheme(.dark)
+            .previewInterfaceOrientation(.landscapeLeft)
+            .previewDevice("iPad Pro (12.9-inch) (6th generation)")
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch)"))
+            .previewDisplayName("iPad Pro")
+    }
 }
