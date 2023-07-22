@@ -1,10 +1,16 @@
-https://github.com/rafunderscore/metallurgy/assets/52125687/88cae9ff-a3f3-4af0-8c43-eb1f3dc8b81e
-
-A collection of metal shaders taking advantage of the brand new visual effect added in the iOS 17 beta
+<p align="center">
+    <img height="256" src="https://github.com/rafunderscore/metallurgy/assets/52125687/22988915-fd54-4298-a099-3dc13926779c" />
+</p>
 
 ## Mission
 
 I started this project as a way to learn more about Metal and how to use it in SwiftUI. Seeing the response of others online intrested in seeing and learning more about this, I decided to make this project open source. I hope that this project will help others learn more about Metal and how to use it in SwiftUI.
+
+<p align="center">
+    <video controls>
+        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/f8eadeb0-20df-4d3a-af96-3c7a4038a99a">
+    </video>
+</p>
 
 ## Architecture
 
@@ -18,19 +24,26 @@ The shaders are then passed into a class which holds the data for each individua
 
 The project is set up like this to provide an emphasis on the shaders themselves. The shaders are the main focus of the project. Doing this allows for the shaders to be easily added and removed from the project without having to worry about creating individual views for each shader.
 
-## Adding Shaders
-
-The process for creating new shaders is fairly simple. There are only a few steps that need to be followed.
-
-#### 1. Write A Shader File
-
-Firstly, you must create a new shader metal file. You can find examples from the repository here as well as checking out ShaderToy for more examples. To add a new shader, create a new file in the Shaders folder inside the respective subfolder of the shader type. For example, to add a new visual shader of type color, create a new file in the <code>Shaders/Color</code> folder. 
-
-Try to keep the file name and function name similar to prevent confusion. Use snake case when defining the name of the file to help keep consistency within the files. For example, if the shader name is <code>ColorShader</code>, the file name should be <code>color_shader.metal</code>.
-
-#### 2. Add The Shader To The Model
-
-Secondly, you must add the shader to the model. To do this, open the ShaderShowcases.swift file. This file holds the data for each shader. To add a new shader, create a new instance of the Showcase class. This class holds the data for each shader.
+<p align="center">
+    <table>
+        <tr>
+            <td>    
+                <p align="center">
+                    <video width="320" height="320" controls>
+                        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/f96fe26b-6744-4491-9566-88bc8dc5c53b">
+                    </video>
+                </p>
+            </td>
+            <td>   
+                <p align="center">
+                    <video width="320" height="320" controls>
+                        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/06486bdd-3178-45d9-8fdd-a913545d7e7c">
+                    </video>
+                </p>
+            </td>
+        </tr>
+    </table>
+</p>
 
 ## Models
 
@@ -107,4 +120,14 @@ This will hold the category of the shader. Whether it is a color shader, a disto
 
 ##### `arguments: [Argument]`
 
-This will hold the arguments that will be passed into the shader. Make sure they are in the same order as the arguments in the shader function. See the ShaderShowcases.swift file for examples.
+This will hold the arguments that will be passed into the shader. Make sure they are in the same order as the arguments in the shader function.
+
+## Contributing
+
+This project is open to and encourages contributions! Feel free to discuss any bug fixes/features by creating a new. If you are interested in contributing code to this project, fork the repository and submit a pull request. Please make sure to document your code changes and test the project before submitting a pull request. Try to keep the code style consistent with the rest of the project as well.
+
+## Disclaimer
+
+This project is open source under the MIT license, which means you have full access to the source code and can modify it to fit your own needs.
+
+This project is also still in beta, so there may be some bugs or areas that could be improved. If you find any bugs or areas that could be improved, please report them by creating a new issue.
