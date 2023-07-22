@@ -6,11 +6,7 @@
 
 I started this project as a way to learn more about Metal and how to use it in SwiftUI. Seeing the response of others online intrested in seeing and learning more about this, I decided to make this project open source. I hope that this project will help others learn more about Metal and how to use it in SwiftUI.
 
-<p align="center">
-    <video controls>
-        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/f8eadeb0-20df-4d3a-af96-3c7a4038a99a">
-    </video>
-</p>
+https://github.com/rafunderscore/metallurgy/assets/52125687/af5f9c8b-566a-44a5-98d2-2f086a061dc7
 
 ## Architecture
 
@@ -18,32 +14,13 @@ The overall architecture of the project is fairly simple to grasp, but there are
 
 Firstly, the project is split into two main parts: the list view and the detail view. The list view is where the user will see all of the shaders that are available to them. The detail view is where the user will see the shader in action and be able to adjust the arguments of the shader.
 
-Secondly, the shaders is split into three main parts: the shader showcases, the shader models, and the shader functions. The shader showcases hold the data for each shader. The shader models hold the data for each argument. The shader functions hold the functions for each shader.
+Secondly, the shaders themselves are split into two main parts: the shader showcases and models. The shader showcases hold the data for each shader while the shader models hold the data for each argument.
 
 The shaders are then passed into a class which holds the data for each individual shader. This array of shaders is then passed into the list view where it is displayed to the user. When the user selects a shader, the shader is passed into the detail view where it is displayed to the user.
 
 The project is set up like this to provide an emphasis on the shaders themselves. The shaders are the main focus of the project. Doing this allows for the shaders to be easily added and removed from the project without having to worry about creating individual views for each shader.
 
-<p align="center">
-    <table>
-        <tr>
-            <td>    
-                <p align="center">
-                    <video width="320" height="320" controls>
-                        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/f96fe26b-6744-4491-9566-88bc8dc5c53b">
-                    </video>
-                </p>
-            </td>
-            <td>   
-                <p align="center">
-                    <video width="320" height="320" controls>
-                        <source src="https://github.com/rafunderscore/metallurgy/assets/52125687/06486bdd-3178-45d9-8fdd-a913545d7e7c">
-                    </video>
-                </p>
-            </td>
-        </tr>
-    </table>
-</p>
+https://github.com/rafunderscore/metallurgy/assets/52125687/4e85be9a-cd13-4dbe-b83a-a0c2350a8be2
 
 ## Models
 
